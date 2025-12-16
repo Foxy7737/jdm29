@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina wed sobre coches</title>
+    <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <nav class="barra">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a class="dropbtn">Peliculas</a>
+                <div class="dropdown-content">
+                    <a href="Prueba 2.html">Fast and the Furious</a>
+                    <a href="Prueba 3.html">Cars</a>
+                    <a href="Prueba 4.html">Need for Speed</a>
+                    <a href="Prueba 5.html">Gran Turismo</a>
+                    <a href="Prueba 6.html">F1</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn">Videojuegos</a>
+                <div class="dropdown-content">
+                    <a href="Prueba 7.html">Need for Speed</a>
+                    <a href="Prueba 8.html">Gran Turismo</a>
+                    <a href="Prueba 9.html">F1</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a class="dropbtn">Coches</a>
+                <div class="dropdown-content">
+                    <a href="Prueba 10.html">Nissan GT-R</a>
+                    <a href="Prueba 11.html">Toyota Supra</a>
+                    <a href="Prueba 12.html">Toyota Celica</a>
+                </div>
+            </li>
+            <li><a href="Prueba 13.html">Usuario</a></li>
+        </ul>
+        <div class="audio-player">
+            <audio id="background-audio" loop>
+                <source src="/Audios/bandoleros.ogg" type="audio/ogg">
+                Tu navegador no soporta audio.
+            </audio>
+            <button id="audio-toggle" class="audio-btn">
+                🔊 Música ON
+            </button>
+        </div>
+    </nav><br>
+    <div class="container" id="dotted">
+        <h2>Registrarse</h2>
+
+        <form id="formRegistro">
+            <label for="fname">Usuario:</label>
+            <input type="text" id="fname" name="usuario" placeholder="Nombre de Usuario" required>
+
+            <label for="fechaNac">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNac" name="fechaNac" required><br>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="password1">Contraseña:</label>
+            <input type="password" id="password1" name="password1" required><br>
+
+            <label for="password2">Repita la Contraseña:</label>
+            <input type="password" id="password2" name="password2" required>
+
+            <p>¿Qué quieres ver en esta página web?</p>
+            <input type="checkbox" id="vehicle1" name="intereses" value="Películas">
+            <label for="vehicle1">Quiero ver películas</label><br>
+            <input type="checkbox" id="vehicle2" name="intereses" value="Videojuegos">
+            <label for="vehicle2">Quiero ver videojuegos</label><br>
+            <input type="checkbox" id="vehicle3" name="intereses" value="Coches">
+            <label for="vehicle3">Quiero ver coches</label><br><br>
+
+            <input type="submit" value="Enviar">
+            <a href="Prueba 13.html" style="margin-left: 20px;">Iniciar Sesión</a>
+        </form>
+    </div>
+    <!-- Lista de usuarios registrados guardados -->
+    <div id="listaRegistros" style="text-align: center;">
+        <h2>Usuarios registrados en este navegador (<span id="contador">0</span>)</h2>
+        <div id="registrosGuardados"></div>
+        <button class="borrar-todo" onclick="borrarTodos()">Borrar todos los registros</button>
+    </div>
+    <script src="14.js"></script>
+</body>
+
+</html>

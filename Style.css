@@ -1,0 +1,1369 @@
+/*Sirve para que tengas una paginacion que al final de la pagina pulsando un boton te lleve a la suguiente pagina*/
+.pagination li a.disabled {
+    color: #dddddd;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0px;
+}
+
+.pagination li a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid black;
+    color: black;
+    margin: 0 4px;
+    border-radius: 5px;
+}
+
+.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.pagination li a:hover:not(.active) {
+    background-color: lightgray;
+}
+
+form {
+    border-radius: 1%;
+    background-color: #f2f2f2;
+    padding: 1%;
+}
+
+input[type=text],
+select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.imagenes:hover {
+    transform: scale(1.05);
+}
+
+/*El ha1 y el h2.cars los usa la pagina 3 que esta tematizada sobre cosas de cars*/
+h1.cars {
+    text-decoration-line: underline;
+    text-decoration-color: gray;
+    color: blue
+}
+
+h2.cars {
+    color: #008CBA
+}
+
+h1 {
+    text-decoration-line: underline;
+    text-decoration-color: gray;
+    color: tomato
+}
+
+h2 {
+    color: orangered
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+body {
+    font-size: 20px;
+}
+
+.button {
+    background-color: #66D;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button1 {
+    border-radius: 8px;
+    border: 2px solid #04AA6D;
+}
+
+.button2 {
+    border-radius: 8px;
+    border: 2px solid #04AA6D;
+}
+
+.button3 {
+    border-radius: 8px;
+    border: 2px solid #008CBA;
+}
+
+.button4 {
+    border-radius: 8px;
+    border: 2px solid dodgerblue;
+    color: black;
+}
+
+.button5 {
+    border-radius: 8px;
+    border: 2px solid red;
+}
+
+.button1:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.button2:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+.button3:hover {
+    background-color: #f44336;
+    color: white;
+}
+
+.button4:hover {
+    background-color: gray;
+}
+
+.button5:hover {
+    background-color: red;
+    color: white;
+}
+
+.contenedor-botones {
+    display: flex;
+    /* Coloca los elementos hijos uno al lado del otro */
+    gap: 10px;
+    /* Añade un espacio de 10px entre los botones */
+}
+
+body {
+    /* Degradado lineal de rojo a azul, de izquierda a derecha */
+    background-image: repeating-conic-gradient(blue 10%, green 20%);
+}
+
+body ul {
+    list-style-type: square;
+    /* Cambia los puntos por cuadrados */
+    list-style-position: inside;
+}
+
+body ol {
+    list-style-type: upper-roman;
+    /* Cambia los números por romanos mayúsculas */
+    list-style-position: inside;
+}
+
+
+.dropbtn {
+    background-color: #38444d;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    /* Barra en horizontal */
+    justify-content: space-between;
+    /* Menú a la izquierda, audio a la derecha */
+    align-items: center;
+    /* Centrado vertical */
+    background-color: #38444d;
+}
+
+h2,
+p {
+    margin: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #38444d;
+    display: flex;
+    gap: 20px;
+}
+
+nav li a,
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav audio {
+    margin-right: 20px;
+    /* Separación del borde derecho */
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+img {
+    border-radius: 8%;
+}
+
+#img1 {
+    filter: sepia(1);
+}
+
+.grid-container {
+    display: grid;
+    /* Define 3 filas y 4 columnas base para una mejor alineación visual. */
+    /* Usamos 'fr' para que las columnas tengan un ancho proporcional flexible. */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    /* Define áreas con nombres para posicionar fácilmente los elementos. */
+    grid-template-areas:
+        "c1 c1 c2 c2"
+        /* Primera fila: dos elementos que abarcan 2 columnas cada uno */
+        "c3 c3 c4 c4"
+        /* Segunda fila: dos elementos que abarcan 2 columnas cada uno */
+        "c5 c5 c6 c6"
+        /* Tercera fila: tres elementos, el del medio abarca 2 columnas */
+        "c8 c8 c9 c9";
+    gap: 10px;
+    /* Espacio entre las cuadrículas */
+    padding: 10px;
+    width: 80%;
+    /* Ancho total del contenedor */
+    margin: auto;
+    /* Centrar el contenedor */
+}
+
+.grid-item {
+    background-color: rgb(0, 0, 0, 0);
+    border: 3px solid black;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Media query para hacer el diseño responsive en pantallas más pequeñas si se desea */
+@media (max-width: 600px) {
+    .contenedor-cuadricula {
+        grid-template-areas:
+            "c1 c1 c1 c1"
+            "c2 c2 c2 c2"
+            "c3 c3 c3 c3"
+            "c4 c4 c4 c4"
+            "c5 c5 c5 c5"
+            "c6 c6 c6 c6"
+            "c7 c7 c7 c7";
+    }
+}
+
+/*Es para que el contenedor donde estan las imagenes de los coches este en el centro de la pagina*/
+.grid-container-coches {
+    grid-template-areas:
+        "c0 c1 c1 c2"
+        /* Primera fila: dos elementos que abarcan 2 columnas cada uno */
+        "c3 c3 c4 c4"
+        /* Segunda fila: dos elementos que abarcan 2 columnas cada uno */
+        "c5 c6 c6 c7"
+        /* Tercera fila: tres elementos, el del medio abarca 2 columnas */
+        "c8 c8 c9 c9";
+}
+
+/*Es para que cada contenedor de cada nissan tenga el mismo color de fondo*/
+.grid-item-nissan {
+    border: 3px solid blue, gray;
+}
+
+/*Sirve para crear unos ejercicios tipo test*/
+.feedback {
+    display: none;
+    font-weight: bold;
+}
+
+.feedback.correcto {
+    color: #00ff99;
+    /* verde */
+}
+
+.feedback.incorrecto {
+    color: red;
+    /* rojo */
+}
+
+#correcto:checked~.feedback.correcto {
+    display: inline;
+}
+
+#incorrecto:checked~.feedback.incorrecto {
+    display: inline;
+}
+
+.container {
+    background-color: #2c2c2c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #000;
+    width: 400px;
+    margin: 0 auto;
+}
+
+/*Sirve para que el border se han puntos*/
+#dotted {
+    border-style: dotted;
+}
+
+/*Sirve para que el border se han rayas*/
+#dashed {
+    border-style: dashed;
+}
+
+/*Sirve para que haya doble borde*/
+#double {
+    border-style: double;
+}
+
+/*Color del borde de la pagina de Fast and Furious*/
+body.fast {
+    background-image: repeating-conic-gradient(blue 10%, gray 20%);
+}
+
+/*Color del borde de la pagina de Cars*/
+body.cars {
+    background-image: repeating-conic-gradient(red 10%, yellow 20%);
+}
+
+/*Color del borde de la pagina de Need for Speed*/
+body.need {
+    background-image: repeating-conic-gradient(white 10%, blue 20%);
+}
+
+/*Color del borde de la pagina de GRan Turismo*/
+body.gran {
+    background-image: repeating-conic-gradient(blue 10%, red 20%);
+}
+
+/*Color del borde de la pagina de F1*/
+body.f1 {
+    background-image: repeating-conic-gradient(yellow 10%, blue 20%);
+}
+
+/*Color del borde de la pagina de Need for Spees Juego*/
+body.need-juego {
+    background-image: repeating-conic-gradient(blue 10%, white 20%);
+}
+
+/*Color del borde de la pagina del Nissan GT-R*/
+body.nissan {
+    background-image: repeating-conic-gradient(gray 10%, blue 20%);
+}
+
+/*Color del borde de la pagina del Toyota Supra*/
+body.supra {
+    background-image: repeating-conic-gradient(white 10%, orange 20%);
+}
+
+/*Color del borde de la pagina del Toyota Celica*/
+body.celica {
+    background-image: repeating-conic-gradient(gray 10%, purple 20%);
+}
+
+/*Sirve para decirle al parrafo y al h3 que tipo de letra quiero*/
+p.pagina {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h3.titulo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Sirve para que cunado tu lo visites, se pone de un color para saber que ya lo has visitado*/
+a.need:visited {
+    color: tomato;
+}
+
+/*Sirve para que cuando tu le lickes al enlace slaga del color que tu le digas*/
+a.speed:active {
+    color: red
+}
+
+/*Sirve para que la lista descridtiva tenga iconos*/
+dt::before {
+    content: "● ";
+}
+
+dd::before {
+    content: " ● ";
+}
+
+/*Sirve para decirle que a los h2 y las etiquetas img que tengan esta clase se pongan en el centro de la pagina*/
+h2.coches {
+    text-align: center;
+}
+
+/*Sirve para que la barra de navegación simpre la estes viendo*/
+nav.barra {
+    position: sticky;
+    top: 0;
+    padding: 0px;
+    z-index: 10;
+}
+
+/*Sirve para que si tu añades un header tenga una imagen de fondo*/
+header.inicio {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9)),
+        url('https://gaugemagazine.com/wp-content/uploads/2024/12/JDM-Cars.png') center/cover fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+header.fast {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9)),
+        url('Imagenes/fast.jpg') center/cover fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+header.cars {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9)),
+        url('Imagenes/cars.jpg') center/cover fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+header.need {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9)),
+        url('Imagenes/need.png') center/cover fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+header.gran {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9)),
+        url('Imagenes/gran\ 2.jpg') center/cover fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+header.f1 {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9)),
+        url('Imagenes/f1\ 2.jpg') center/cover fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/*supra y gtr*/
+header.gs {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9)),
+        url('Imagenes/skyline\ y\ supra.jpg') center/cover fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+header.celica {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.9)),
+        url('Imagenes/celica\ 2.jpg') center/cover fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/*Esto sirve para poner una imagen centrada en la imagen de fondo*/
+img.jdm {
+    position: absolute;
+    top: 100px;
+    text-align: center;
+}
+
+img.fast {
+    position: absolute;
+    top: 250px;
+    left: 400px;
+    text-align: center;
+}
+
+img.cars {
+    position: absolute;
+    top: 190px;
+    text-align: center;
+}
+
+img.need {
+    position: absolute;
+    top: 190px;
+    text-align: center;
+}
+
+img.gran {
+    position: absolute;
+    top: 190px;
+    text-align: center;
+}
+
+img.f1 {
+    position: absolute;
+    top: 220px;
+    text-align: center;
+}
+
+img.gtr {
+    position: absolute;
+    top: 110px;
+    text-align: center;
+}
+
+img.supra {
+    position: absolute;
+    top: 110px;
+    text-align: center;
+}
+
+img.celica {
+    position: absolute;
+    top: 110px;
+    text-align: center;
+}
+
+.audio-player {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.audio-btn {
+    background: #ff6b00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.audio-btn.muted {
+    background: #666;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fondo-cielo {
+    background-image: url("Imagenes/cielo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.opinion,
+.personal {
+    max-width: 900px;
+    margin: 70px auto;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+}
+
+.opinion h2,
+.personal h2 {
+    text-align: center;
+    color: #ff6b00;
+    margin-bottom: 20px;
+}
+
+
+.favoritos {
+    margin: 80px auto;
+    max-width: 1000px;
+}
+
+.favoritos h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.favoritos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.coche {
+    background: #222;
+    padding: 20px;
+    border-radius: 12px;
+    transition: transform 0.3s;
+}
+
+.coche:hover {
+    transform: scale(1.05);
+}
+
+.firma {
+    text-align: center;
+    margin: 80px 0 30px;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+.opinion-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 120px auto;
+    padding: 40px;
+}
+
+.opinion-texto {
+    flex: 1;
+}
+
+.opinion-texto h2 {
+    color: #ff6b00;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.opinion-texto p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.opinion-imagen {
+    flex: 1;
+}
+
+.opinion-imagen img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+}
+
+.opinion-visual {
+    animation: aparecer-lateral 1.2s ease;
+}
+
+@keyframes aparecer-lateral {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scroll suave para toda la página */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+    /* Para compensar el menú fijo */
+}
+
+/* Indicador de scroll personalizado */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #ff6b00, #ff8c42);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(45deg, #ff8c42, #ff6b00);
+}
+
+/* Animaciones de entrada */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Retrasos escalonados */
+.personal:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.personal:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.favoritos {
+    transition-delay: 0.3s;
+}
+
+.opinion-visual {
+    transition-delay: 0.4s;
+}
+
+/* ===== MINI-JUEGO JDM ===== */
+
+/* Botón flotante del juego */
+.floating-game-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background: linear-gradient(45deg, #ff0000, #ff6b00);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 25px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    animation: pulse-game 2s infinite;
+}
+
+.floating-game-btn:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 0 35px rgba(255, 0, 0, 0.9);
+    animation: none;
+}
+
+.floating-game-btn .btn-text {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+@keyframes pulse-game {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Modal del juego */
+.game-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-modal-content {
+    background: #111;
+    width: 90%;
+    max-width: 1000px;
+    border-radius: 20px;
+    border: 3px solid #ff6b00;
+    overflow: hidden;
+    box-shadow: 0 0 50px rgba(255, 107, 0, 0.5);
+    animation: modal-appear 0.5s ease;
+}
+
+@keyframes modal-appear {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.game-header {
+    background: linear-gradient(45deg, #222, #000);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ff6b00;
+}
+
+.game-header h2 {
+    color: #ff6b00;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+    font-size: 28px;
+}
+
+.close-game {
+    background: #ff0000;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-game:hover {
+    background: #ff6b00;
+    transform: rotate(90deg);
+}
+
+/* Pista de carreras */
+#race-track {
+    background: linear-gradient(to bottom, #2d3436, #1a1a1a);
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 5px solid #ff6b00;
+}
+
+.track {
+    position: relative;
+    height: 100%;
+    background: repeating-linear-gradient(90deg,
+            transparent,
+            transparent 50px,
+            #ff6b00 50px,
+            #ff6b00 52px);
+}
+
+.finish-line {
+    position: absolute;
+    right: 100px;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    background: repeating-linear-gradient(to bottom,
+            #fff 0px,
+            #fff 20px,
+            #000 20px,
+            #000 40px);
+    z-index: 1;
+}
+
+.road-markings {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: repeating-linear-gradient(to right,
+            #fff 0px,
+            #fff 20px,
+            transparent 20px,
+            transparent 40px);
+    z-index: 0;
+}
+
+/* Coches */
+.player-car,
+.ai-car {
+    position: absolute;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    transition: left 0.1s linear;
+    z-index: 2;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.player-car {
+    background: linear-gradient(45deg, #ff0000, #ff6b00);
+    bottom: 50px;
+    left: 50px;
+}
+
+.ai-car {
+    background: linear-gradient(45deg, #00a8ff, #0097e6);
+    bottom: 110px;
+    left: 50px;
+}
+
+#ai-car-1 {
+    background: linear-gradient(45deg, #00b894, #00a085);
+}
+
+#ai-car-2 {
+    background: linear-gradient(45deg, #e84118, #c23616);
+}
+
+#ai-car-3 {
+    background: linear-gradient(45deg, #8c7ae6, #7158e2);
+}
+
+.car-model {
+    position: absolute;
+    top: -25px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+/* HUD del juego */
+.game-hud {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid #333;
+}
+
+.hud-item {
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 107, 0, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 107, 0, 0.3);
+}
+
+.hud-label {
+    display: block;
+    font-size: 12px;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.hud-value {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff6b00;
+    text-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+}
+
+.nitro-bar {
+    width: 100%;
+    height: 20px;
+    background: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.nitro-fill {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #00b894, #00ffaa);
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* Controles del juego */
+.game-controls {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #1a1a1a;
+}
+
+.game-btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-width: 200px;
+}
+
+.start-btn {
+    background: linear-gradient(45deg, #00b894, #00a085);
+    color: white;
+}
+
+.start-btn:hover:not(:disabled) {
+    background: linear-gradient(45deg, #00a085, #00b894);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 184, 148, 0.3);
+}
+
+.nitro-btn {
+    background: linear-gradient(45deg, #ff9f43, #ff6b00);
+    color: white;
+}
+
+.nitro-btn:hover:not(:disabled) {
+    background: linear-gradient(45deg, #ff6b00, #ff9f43);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
+}
+
+.game-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.control-info {
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Selector de coche */
+.car-selector {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid #333;
+}
+
+.car-selector h3 {
+    color: #ff6b00;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cars-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.car-option {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid transparent;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.car-option:hover {
+    background: rgba(255, 107, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.car-option.active {
+    border-color: #ff6b00;
+    background: rgba(255, 107, 0, 0.2);
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
+}
+
+.car-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.car-option span {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Notificación de desafío */
+.challenge-notification {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    background: linear-gradient(45deg, #222, #000);
+    border: 3px solid #ff6b00;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(255, 107, 0, 0.3);
+    z-index: 10001;
+    display: none;
+    animation: slide-in 0.5s ease;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.challenge-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.challenge-icon {
+    font-size: 50px;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.challenge-text h3 {
+    color: #ff6b00;
+    margin: 0 0 5px 0;
+}
+
+.challenge-text p {
+    color: #aaa;
+    margin: 0;
+}
+
+.challenge-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.challenge-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.challenge-btn.accept {
+    background: #00b894;
+    color: white;
+}
+
+.challenge-btn.decline {
+    background: #e84118;
+    color: white;
+}
+
+.challenge-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Efectos del juego */
+@keyframes nitro-burst {
+    0% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(2);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}
+
+.nitro-active {
+    animation: nitro-burst 0.5s ease;
+}
+
+@keyframes finish-line {
+    0% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(3);
+    }
+
+    100% {
+        filter: brightness(1);
+    }
+}
+
+.finish-crossed {
+    animation: finish-line 1s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .game-hud {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .game-controls {
+        flex-direction: column;
+    }
+
+    .cars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .floating-game-btn .btn-text {
+        display: none;
+    }
+}
