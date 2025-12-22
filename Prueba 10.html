@@ -4,15 +4,26 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina wed sobre coches</title>
+    <title>JDM World - GTR-R34</title>
     <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/z-icon">
     <link rel="stylesheet" href="Style.css">
+    <!-- SEO avanzado 2025 -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tu nick o nombre">
+
+    <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
+    <meta property="og:title" content="JDM World - Nissan GT-R R34">
+    <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
+    <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
+    <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
+    <meta property="og:type" content="article">
 </head>
 
 <body class="nissan">
     <!--Este codigo es una barra de tarreas horizontal-->
     <nav class="barra">
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
                 <a class="dropbtn">Peliculas</a>
@@ -37,7 +48,7 @@
                 <div class="dropdown-content">
                     <a href="Prueba 10.html">Nissan GT-R</a>
                     <a href="Prueba 11.html">Toyota Supra</a>
-                    <a href="Prueba 12.html">Toyota Celica </a>
+                    <a href="Prueba 12.html">Toyota Celica</a>
                 </div>
             </li>
             <li class="dropdown">
@@ -45,9 +56,9 @@
                 <div class="dropdown-content">
                     <a href="Prueba 13.html">Iniciar Sesión</a>
                     <a href="Prueba 14.html">Registrarse</a>
-                    <a href="Prueba 15.html">Usuario</a>
                 </div>
             </li>
+            <li><a href="Prueba 15.html">Usuario</a></li>
         </ul>
         <div class="audio-player">
             <audio id="background-audio" loop>
@@ -57,6 +68,8 @@
             <button id="audio-toggle" class="audio-btn">
                 🔊 Música ON
             </button>
+            <button id="darkModeToggle"
+                style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
         </div>
     </nav>
     <header class="gs">
@@ -1011,17 +1024,84 @@
             comprando R34's de manera masiva para almacenarlos hasta 2024.
         </p>
     </i>
-    <div style="text-align: center;">
-        <img src="https://hips.hearstapps.com/hmg-prod/images/image-2-6426a46bb3e23.jpg?crop=0.8884775566867191xw:1xh;center,top&resize=1200:*"
-            width="40%">
-    </div><br>
-    <section class="opinion">
-        <h2>Qué me gusta de este coche</h2>
-        <p>
-            Este coche me llama la atención por su diseño, su historia y
-            lo que representa dentro del mundo JDM.
-        </p>
+    <section class="opinion-visual">
+        <div class="opinion-texto">
+            <h2>Por qué el Nissan GT-R es especial para mí 🏎️🔥</h2>
+            <p>
+                El GT-R es un icono JDM puro: tracción total, twin-turbo y capaz de humillar supercars mucho más
+                caros.<br><br>
+                El R34 es mi favorito por su diseño agresivo y por aparecer en Fast & Furious. ¡Paul Walker lo hizo
+                legendario!
+            </p>
+            <p>
+                El R34 BNR34 con RB26DETT... ¡bestia total! En 2024 ya es legal en USA y los precios están por las
+                nubes.<br>
+                Suena brutal y acelera como un misil.
+            </p>
+            <p>
+                Representa la ingeniería japonesa perfecta: fiable, tunable y rápido en cualquier condición. ¡Sueño
+                tener uno algún día!
+            </p>
+        </div>
+        <div class="opinion-imagen">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/image-2-6426a46bb3e23.jpg?crop=0.8884775566867191xw:1xh;center,top&resize=1200:*"
+                alt="Nissan GT-R JDM">
+        </div>
     </section>
+    <!-- === MI OPINIÓN PERSONAL Y VÍDEOS DEL NISSAN GT-R === -->
+    <div style="margin: 80px 0; text-align: center;">
+        <h2 style="color: #ff6b00; margin-bottom: 30px; font-size: 2em;">
+            Mi opinión personal sobre el Nissan GT-R 🚀🔥
+        </h2>
+
+        <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.3em; line-height: 1.7; color: #eee;">
+            El Nissan GT-R, conocido como "Godzilla", es el rey de los JDM: tracción total, twin-turbo y capaz de
+            destruir supercars italianos en pista.<br><br>
+            Mi generación favorita es el R34 por su diseño agresivo y por ser el coche de Brian en 2 Fast 2 Furious.
+            ¡Icono total!<br>
+            El RB26DETT es tunable infinito y suena brutal. En 2025, con los R34 legales en USA, ¡sueño tener uno tuned!
+        </p>
+
+        <!-- Vídeo icónico: Carrera del R34 en 2 Fast 2 Furious -->
+        <div style="max-width: 900px; margin: 0 auto 50px;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px; font-size: 1.6em;">
+                Escena mítica: Brian O'Conner en el Skyline R34 (2 Fast 2 Furious)
+            </h3>
+            <iframe width="100%" height="500" src="https://www.yout-ube.com/watch?v=RAKf9isXQdk"
+                title="Brian races in Nissan Skyline GT-R R34" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p style="margin-top: 15px; font-style: italic; color: #aaa;">
+                Ese salto y la persecución... ¡puro JDM en Hollywood!
+            </p>
+        </div>
+
+        <!-- Vídeo extra: Review del R34 -->
+        <div style="max-width: 900px; margin: 0 auto 50px;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px; font-size: 1.6em;">
+                Review del R34: El ultimate Japanese icon
+            </h3>
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/AHVEoRLD-ok"
+                title="Nissan Skyline GT-R R34 review" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p style="margin-top: 15px; font-style: italic; color: #aaa;">
+                Por qué el R34 es tan legendario... ¡explicado perfecto!
+            </p>
+        </div>
+
+        <!-- Mi top generaciones GT-R -->
+        <div style="background: #222; padding: 30px; border-radius: 15px; max-width: 700px; margin: 0 auto;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px;">Mi Top 3 generaciones GT-R</h3>
+            <ol style="text-align: left; font-size: 1.2em; line-height: 1.8; margin-left: 40px;">
+                <li><strong>R34 (1999-2002)</strong> → Diseño perfecto y JDM puro</li>
+                <li><strong>R35 (2007-actual)</strong> → Tecnología brutal y récord en Nürburgring</li>
+                <li><strong>R32 (1989)</strong> → Donde nació Godzilla</li>
+            </ol>
+        </div>
+    </div>
     <ol class="pagination">
         <li><a class="disabled" href="Prueba 10.html">&laquo;</a></li>
         <li><a class="active" href="Prueba 10.html">1</a></li>
@@ -1029,7 +1109,12 @@
         <li><a href="Prueba 12.html">3</a></li>
         <li><a href="Prueba 11.html">&raquo;</a></li>
     </ol>
+    <button id="btnVolverArriba" title="Volver arriba" aria-label="Volver al inicio">
+        ↑
+    </button>
+    <div id="progressBar"></div>
     <script src="session.js"></script>
+    <script src="scroll.js"></script>
 </body>
 
 </html>

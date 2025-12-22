@@ -4,15 +4,26 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina wed sobre coches</title>
+    <title>JDM World - Toyota Celica</title>
     <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/z-icon">
     <link rel="stylesheet" href="Style.css">
+    <!-- SEO avanzado 2025 -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tu nick o nombre">
+
+    <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
+    <meta property="og:title" content="JDM World - Nissan GT-R R34">
+    <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
+    <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
+    <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
+    <meta property="og:type" content="article">
 </head>
 
 <body class="celica">
     <!--Este codigo es una barra de tarreas horizontal-->
     <nav class="barra">
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
                 <a class="dropbtn">Peliculas</a>
@@ -37,7 +48,7 @@
                 <div class="dropdown-content">
                     <a href="Prueba 10.html">Nissan GT-R</a>
                     <a href="Prueba 11.html">Toyota Supra</a>
-                    <a href="Prueba 12.html">Toyota Celica </a>
+                    <a href="Prueba 12.html">Toyota Celica</a>
                 </div>
             </li>
             <li class="dropdown">
@@ -45,9 +56,9 @@
                 <div class="dropdown-content">
                     <a href="Prueba 13.html">Iniciar Sesión</a>
                     <a href="Prueba 14.html">Registrarse</a>
-                    <a href="Prueba 15.html">Usuario</a>
                 </div>
             </li>
+            <li><a href="Prueba 15.html">Usuario</a></li>
         </ul>
         <div class="audio-player">
             <audio id="background-audio" loop>
@@ -57,6 +68,8 @@
             <button id="audio-toggle" class="audio-btn">
                 🔊 Música ON
             </button>
+            <button id="darkModeToggle"
+                style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
         </div>
     </nav>
     <header class="celica">
@@ -522,19 +535,81 @@
             super strut, short shifter, bloqueo de diferencial (LSD), body kit único, chasis reforzado e interior
             único.
         </p>
-        <div style="text-align: center;">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqzzoIRdPYio5mtLOIfeuXp3JuLIiyOPx3UQ&"
-                width="50%">
-        </div>
     </i>
-    <section class="opinion">
-        <h2>Qué me gusta de este coche</h2>
-        <p>
-            Este coche me llama la atención por su diseño, su historia y
-            lo que representa dentro del mundo JDM.
-        </p>
-    </section>
+    <section class="opinion-visual">
+        <div class="opinion-texto">
+            <h2>Por qué el Toyota Celica es especial para mí 🏆🌿</h2>
+            <p>
+                La Celica es el coche olvidado pero brutal: ligero, manejable y con versiones rally legendarias como la
+                GT-Four.<br><br>
+                Ganó mundiales de rally con Carlos Sainz... ¡historia pura!
+            </p>
+            <p>
+                La ST205 GT-Four: tracción total, turbo y look agresivo. Perfecta para curvas y rally.<br>
+                La T230 también mola por ser deportiva y asequible.
+            </p>
+            <p>
+                Es divertido, fiable y no tan caro como GT-R o Supra. ¡Un JDM sleeper perfecto para daily y track!
+            </p>
+        </div>
 
+        <div class="opinion-imagen">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqzzoIRdPYio5mtLOIfeuXp3JuLIiyOPx3UQ&"
+                alt="Nissan GT-R JDM">
+        </div>
+    </section>
+    <!-- === MI OPINIÓN PERSONAL Y VÍDEOS DEL TOYOTA CELICA === -->
+    <div style="margin: 80px 0; text-align: center;">
+        <h2 style="color: #ff6b00; margin-bottom: 30px; font-size: 2em;">
+            Mi opinión personal sobre el Toyota Celica 🏆🌟
+        </h2>
+
+        <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.3em; line-height: 1.7; color: #eee;">
+            La Celica es el JDM underrated: ligero, manejable y con versiones rally legendarias como la GT-Four.<br><br>
+            Ganó mundiales con Carlos Sainz... ¡historia del WRC!<br>
+            Mi favorita la ST205 por el look agresivo y AWD turbo. Perfecta para curvas y diversión diaria.
+        </p>
+
+        <!-- Vídeo icónico: Rally Celica -->
+        <div style="max-width: 900px; margin: 0 auto 50px;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px; font-size: 1.6em;">
+                Celica GT-Four ST205 rally sound & flames
+            </h3>
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/byDlbktr7Qc"
+                title="Toyota Celica GT-Four rally" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p style="margin-top: 15px; font-style: italic; color: #aaa;">
+                Anti-lag, llamas y aceleraciones... ¡sonido WRC puro!
+            </p>
+        </div>
+
+        <!-- Vídeo extra: Rally drive -->
+        <div style="max-width: 900px; margin: 0 auto 50px;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px; font-size: 1.6em;">
+                Rallying a Celica GT-Four
+            </h3>
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/Je-GqE1LUEg"
+                title="Rally Celica GT-Four" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p style="margin-top: 15px; font-style: italic; color: #aaa;">
+                Polvo, saltos y AWD... ¡diversión real!
+            </p>
+        </div>
+
+        <!-- Mi top generaciones Celica -->
+        <div style="background: #222; padding: 30px; border-radius: 15px; max-width: 700px; margin: 0 auto;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px;">Mi Top 3 generaciones Celica</h3>
+            <ol style="text-align: left; font-size: 1.2em; line-height: 1.8; margin-left: 40px;">
+                <li><strong>ST205 GT-Four (1994-1999)</strong> → Rally rey</li>
+                <li><strong>T230 (1999-2006)</strong> → Deportiva y asequible</li>
+                <li><strong>ST185 (1990-1993)</strong> → Campeona WRC</li>
+            </ol>
+        </div>
+    </div>
     <ol class="pagination">
         <li><a href="Prueba 11.html">&laquo;</a></li>
         <li><a href="Prueba 10.html">1</a></li>
@@ -542,7 +617,9 @@
         <li><a class="active" href="Prueba 12.html">3</a></li>
         <li><a class="disabled" href="Prueba 12.html">&raquo;</a></li>
     </ol>
+    <div id="progressBar"></div>
     <script src="session.js"></script>
+    <script src="scroll.js"></script>
 </body>
 
 </html>

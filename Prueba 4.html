@@ -4,14 +4,25 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina wed sobre coches</title>
+    <title>JDM World - Need for Speed</title>
     <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/z-icon">
     <link rel="stylesheet" href="Style.css">
+    <!-- SEO avanzado 2025 -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tu nick o nombre">
+
+    <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
+    <meta property="og:title" content="JDM World - Nissan GT-R R34">
+    <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
+    <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
+    <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
+    <meta property="og:type" content="article">
 </head>
 
 <body class="need">
     <nav class="barra">
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
                 <a class="dropbtn">Peliculas</a>
@@ -44,9 +55,9 @@
                 <div class="dropdown-content">
                     <a href="Prueba 13.html">Iniciar Sesión</a>
                     <a href="Prueba 14.html">Registrarse</a>
-                    <a href="Prueba 15.html">Usuario</a>
                 </div>
             </li>
+            <li><a href="Prueba 15.html">Usuario</a></li>
         </ul>
         <div class="audio-player">
             <audio id="background-audio" loop>
@@ -55,7 +66,9 @@
             </audio>
             <button id="audio-toggle" class="audio-btn">
                 🔊 Música ON
-            </button>
+            </button><br>
+            <button id="darkModeToggle"
+                style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
         </div>
     </nav>
     <header class="need">
@@ -306,82 +319,55 @@
     </i>
     <div style="text-align: center;"><a href="https://es.wikipedia.org/wiki/Need_for_Speed_(pel%C3%ADcula)"
             target="_blank" class="button button3">Wikipedia</a></div><br>
+    <section class="opinion-visual">
+        <div class="opinion-texto">
+            <h2>Por qué Need for Speed (película) es especial para mí 🏁🔥</h2>
+            <p>
+                Esta peli es un homenaje al juego NFS: carreras ilegales, venganza y coches brutales.<br><br>
+                Lo que me flipa es que casi todo es real: crashes de verdad, persecuciones sin efectos baratos. Aaron
+                Paul como Tobey Marshall transmite rabia y pasión perfecta.
+            </p>
+        </div>
+        <div class="opinion-imagen">
+            <img src="Imagenes/need.png" alt="Nissan GT-R JDM">
+        </div>
+    </section>
     <div class="container" id="dotted">
-        <h2>Preguntas</h2>
-        <p>1. ¿Quién interpreta al protagonista Tobey Marshall?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Dominic Cooper
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Aaron Paul
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Scott Mescudi (Kid Cudi)
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Imogen Poots
-                <span class="feedback incorrecto">❌</span>
-            </label>
+        <h2>Preguntas sobre Need for Speed</h2>
+        <p>1. ¿Cuál es el nombre del protagonista?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q1" data-correct="true">Tobey Marshall</label><br>
+            <label><input type="radio" name="q1" data-correct="false">Pete Coleman</label><br>
+            <label><input type="radio" name="q1" data-correct="false">Dino Brewster</label><br>
+            <label><input type="radio" name="q1" data-correct="false">Anita Maddon</label>
         </form>
-        <p>2. ¿Cuál es la profesión de Tobey al inicio de la película??</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Piloto de carreras profesional
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Agente de policía
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Mecánico y corredor callejero
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Ingeniero de automóviles de lujo
-                <span class="feedback incorrecto">❌</span>
-            </label>
+        <p>2. ¿Qué coche conduce Tobey Marshall en la carrera final?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q2" data-correct="false">Lamborghini Sesto Elemento</label><br>
+            <label><input type="radio" name="q2" data-correct="false">Bugatti Veyron</label><br>
+            <label><input type="radio" name="q2" data-correct="true">Ford Mustang Shelby GT500</label><br>
+            <label><input type="radio" name="q2" data-correct="false">Koenigsegg Agera R</label>
         </form>
-        <p>3. ¿Qué coche icónico conduce Tobey en la gran carrera final?</p>
-        <form>
-            <label><input type="radio" name="color" id="correcto">Koenigsegg Agera R
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Ford Mustang GT500
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Bugatti Veyron
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">McLaren P1
-                <span class="feedback incorrecto">❌</span>
-            </label>
+        <p>3. ¿Quién es el villano principal de la película?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q3" data-correct="false">Benny</label><br>
+            <label><input type="radio" name="q3" data-correct="true">Dino Brewster</label><br>
+            <label><input type="radio" name="q3" data-correct="false">Monarch</label><br>
+            <label><input type="radio" name="q3" data-correct="false">Joe Peck</label>
         </form>
-        <p>4. ¿Cuál es el motivo principal por el que Tobey busca competir en la DeLeon?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Demostrar que es el mejor piloto
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Vengar la muerte de su amigo
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Ganar dinero para salvar su taller
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Impresionar a Julia
-                <span class="feedback incorrecto">❌</span>
-            </label>
+        <p>4. ¿En qué prisión está Tobey al comienzo?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q4" data-correct="true">Mount Kisco</label><br>
+            <label><input type="radio" name="q4" data-correct="false">San Francisco</label><br>
+            <label><input type="radio" name="q4" data-correct="false">New York</label><br>
+            <label><input type="radio" name="q4" data-correct="false">Detroit</label>
         </form>
-        <p>5. ¿Quién acompaña a Tobey como copiloto durante el viaje?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Monarch
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Julia Maddon
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Finn
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Dino Brewster
-                <span class="feedback incorrecto">❌</span>
-            </label>
+        <p>5. ¿Cuál es el nombre de la novia del protagonista?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q5" data-correct="false">Monarch</label><br>
+            <label><input type="radio" name="q5" data-correct="true">Julia Maddon</label><br>
+            <label><input type="radio" name="q5" data-correct="false">Finn</label><br>
+            <label><input type="radio" name="q5" data-correct="false">Dino Brewster</label>
         </form>
     </div><br>
     <!-- === MI OPINIÓN PERSONAL Y VÍDEO DE NEED FOR SPEED === -->
@@ -390,7 +376,7 @@
             Mi opinión personal sobre Need for Speed (2014) 🏁🔥
         </h2>
 
-        <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.3em; line-height: 1.7; color: #eee;">
+        <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.3em; line-height: 1.7; color: black;">
             Esta peli es un homenaje brutal al juego de Need for Speed: carreras ilegales, policías persiguiendo y
             coches reales (¡nada de CGI barato!).<br>
             Aaron Paul como Tobey Marshall está genial, pasando de la cárcel a vengarse en la De Leon.<br><br>
@@ -409,7 +395,7 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
-            <p style="margin-top: 15px; font-style: italic; color: #aaa;">
+            <p style="margin-top: 15px; font-style: italic; color: gainsboro;">
                 Esa intro con el Mustang... ¡te pone en modo carrera desde el segundo 1!
             </p>
         </div>
@@ -424,7 +410,7 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
-            <p style="margin-top: 15px; font-style: italic; color: #aaa;">
+            <p style="margin-top: 15px; font-style: italic; color: gainsboro;">
                 Sin música para más realismo... ¡brutal! 🏆
             </p>
         </div>
@@ -452,8 +438,10 @@
         <li><a href="Prueba 6.html">5</a></li>
         <li><a href="Prueba 5.html">&raquo;</a></li>
     </ol>
+    <div id="progressBar"></div>
     <script src="session.js"></script>
     <script src="quiz.js"></script>
+    <script src="scroll.js"></script>
 </body>
 
 </html>

@@ -4,15 +4,26 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina wed sobre coches</title>
+    <title>JDM World - Supra MK4</title>
     <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/z-icon">
     <link rel="stylesheet" href="Style.css">
+    <!-- SEO avanzado 2025 -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tu nick o nombre">
+
+    <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
+    <meta property="og:title" content="JDM World - Nissan GT-R R34">
+    <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
+    <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
+    <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
+    <meta property="og:type" content="article">
 </head>
 
 <body class="supra">
     <!--Este codigo es una barra de tarreas horizontal-->
     <nav class="barra">
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
                 <a class="dropbtn">Peliculas</a>
@@ -37,7 +48,7 @@
                 <div class="dropdown-content">
                     <a href="Prueba 10.html">Nissan GT-R</a>
                     <a href="Prueba 11.html">Toyota Supra</a>
-                    <a href="Prueba 12.html">Toyota Celica </a>
+                    <a href="Prueba 12.html">Toyota Celica</a>
                 </div>
             </li>
             <li class="dropdown">
@@ -45,9 +56,9 @@
                 <div class="dropdown-content">
                     <a href="Prueba 13.html">Iniciar Sesión</a>
                     <a href="Prueba 14.html">Registrarse</a>
-                    <a href="Prueba 15.html">Usuario</a>
                 </div>
-            </li>>
+            </li>
+            <li><a href="Prueba 15.html">Usuario</a></li>
         </ul>
         <div class="audio-player">
             <audio id="background-audio" loop>
@@ -57,6 +68,8 @@
             <button id="audio-toggle" class="audio-btn">
                 🔊 Música ON
             </button>
+            <button id="darkModeToggle"
+                style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
         </div>
     </nav>
     <header class="gs">
@@ -585,13 +598,81 @@
             ubicado entre los asientos o directamente tocando la pantalla, ya que es táctil.
         </p>
     </i>
-    <section class="opinion">
-        <h2>Qué me gusta de este coche</h2>
-        <p>
-            Este coche me llama la atención por su diseño, su historia y
-            lo que representa dentro del mundo JDM.
-        </p>
+    <section class="opinion-visual">
+        <div class="opinion-texto">
+            <h2>Por qué el Toyota Supra es especial para mí 🚀🍊</h2>
+            <p>
+                El Supra MK4 (A80) es legendario por su motor 2JZ-GTE: indestructible y capaz de 1000+ CV con mods
+                simples.<br><br>
+                Apareció en Fast & Furious con Paul Walker y se convirtió en icono mundial.
+            </p>
+            <p>
+                El naranja de la peli o un black tuned. El 2JZ no rompe nunca, ¡ideal para drift y drag!<br>
+                El nuevo A90 es genial, pero el MK4 es el alma JDM.
+            </p>
+            <p>
+                Diseño timeless, potencia infinita y sonido del inline-6... ¡el coche perfecto para cualquier
+                petrolhead!
+            </p>
+        </div>
+
+        <div class="opinion-imagen">
+            <img src="https://files.hodoor.world/main/dfefa2fc-519e-43d9-993b-7b8b75a6f724.jpeg" alt="Nissan GT-R JDM">
+        </div>
     </section>
+    <!-- === MI OPINIÓN PERSONAL Y VÍDEOS DEL TOYOTA SUPRA === -->
+    <div style="margin: 80px 0; text-align: center;">
+        <h2 style="color: #ff6b00; margin-bottom: 30px; font-size: 2em;">
+            Mi opinión personal sobre el Toyota Supra 🍊🏁
+        </h2>
+
+        <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.3em; line-height: 1.7; color: #eee;">
+            El Supra MK4 es el coche tunable definitivo gracias al 2JZ-GTE: indestructible y llega a 1000+ CV
+            fácil.<br><br>
+            El naranja de Fast & Furious lo hizo icono mundial. Mi sueño: uno tuned para drift y drag.<br>
+            El nuevo A90 es rápido, pero el MK4 tiene alma JDM eterna.
+        </p>
+
+        <!-- Vídeo icónico: Drift Supra -->
+        <div style="max-width: 900px; margin: 0 auto 50px;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px; font-size: 1.6em;">
+                Supra MK4 drift weapon 700HP
+            </h3>
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/_YpjtQ-Mezo"
+                title="Toyota Supra MK4 700HP drift" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p style="margin-top: 15px; font-style: italic; color: #aaa;">
+                Ese single turbo y drifts... ¡bestia total!
+            </p>
+        </div>
+
+        <!-- Vídeo extra: Touge drift -->
+        <div style="max-width: 900px; margin: 0 auto 50px;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px; font-size: 1.6em;">
+                Ultimate Touge drift en Supra
+            </h3>
+            <iframe width="100%" height="500" src="https://www.youtube.com/embed/KyS2Wckan90" title="Supra touge drift"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p style="margin-top: 15px; font-style: italic; color: #aaa;">
+                Montañas, otoño y Supra... ¡poesía JDM!
+            </p>
+        </div>
+
+        <!-- Mi top versiones Supra -->
+        <div style="background: #222; padding: 30px; border-radius: 15px; max-width: 700px; margin: 0 auto;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px;">Mi Top 3 versiones Supra</h3>
+            <ol style="text-align: left; font-size: 1.2em; line-height: 1.8; margin-left: 40px;">
+                <li><strong>MK4 A80 (1993-2002)</strong> → El clásico tunable</li>
+                <li><strong>MK5 A90 (2019-)</strong> → Moderno y rápido</li>
+                <li><strong>MK3 (1986-1992)</strong> → El inicio turbo</li>
+            </ol>
+        </div>
+    </div>
     <ol class="pagination">
         <li><a href="Prueba 10.html">&laquo;</a></li>
         <li><a href="Prueba 10.html">1</a></li>
@@ -599,7 +680,9 @@
         <li><a href="Prueba 12.html">3</a></li>
         <li><a href="Prueba 12.html">&raquo;</a></li>
     </ol>
+    <div id="progressBar"></div>
     <script src="session.js"></script>
+    <script src="scroll.js"></script>
 </body>
 
 </html>

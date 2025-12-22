@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /*Sirve para que tengas una paginacion que al final de la pagina pulsando un boton te lleve a la suguiente pagina*/
 .pagination li a.disabled {
     color: #dddddd;
@@ -170,7 +174,7 @@ body {
 
 body {
     /* Degradado lineal de rojo a azul, de izquierda a derecha */
-    background-image: repeating-conic-gradient(blue 10%, green 20%);
+    background: linear-gradient(90deg, blue, green);
 }
 
 body ul {
@@ -393,47 +397,47 @@ img {
 
 /*Color del borde de la pagina de Fast and Furious*/
 body.fast {
-    background-image: repeating-conic-gradient(blue 10%, gray 20%);
+    background: linear-gradient(90deg, blue, gray);
 }
 
 /*Color del borde de la pagina de Cars*/
 body.cars {
-    background-image: repeating-conic-gradient(red 10%, yellow 20%);
+    background: linear-gradient(90deg, red, yellow);
 }
 
 /*Color del borde de la pagina de Need for Speed*/
 body.need {
-    background-image: repeating-conic-gradient(white 10%, blue 20%);
+    background: linear-gradient(90deg, white, blue);
 }
 
 /*Color del borde de la pagina de GRan Turismo*/
 body.gran {
-    background-image: repeating-conic-gradient(blue 10%, red 20%);
+    background: linear-gradient(90deg, blue, red);
 }
 
 /*Color del borde de la pagina de F1*/
 body.f1 {
-    background-image: repeating-conic-gradient(yellow 10%, blue 20%);
+    background: linear-gradient(90deg, yellow, blue);
 }
 
 /*Color del borde de la pagina de Need for Spees Juego*/
 body.need-juego {
-    background-image: repeating-conic-gradient(blue 10%, white 20%);
+    background: linear-gradient(90deg, blue, white);
 }
 
 /*Color del borde de la pagina del Nissan GT-R*/
 body.nissan {
-    background-image: repeating-conic-gradient(gray 10%, blue 20%);
+    background: linear-gradient(90deg gray, blue);
 }
 
 /*Color del borde de la pagina del Toyota Supra*/
 body.supra {
-    background-image: repeating-conic-gradient(white 10%, orange 20%);
+    background: linear-gradient(90deg white, orange);
 }
 
 /*Color del borde de la pagina del Toyota Celica*/
 body.celica {
-    background-image: repeating-conic-gradient(gray 10%, purple 20%);
+    background: linear-gradient(90deg gray, purple);
 }
 
 /*Sirve para decirle al parrafo y al h3 que tipo de letra quiero*/
@@ -750,6 +754,23 @@ img.celica {
 }
 
 .opinion-texto p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/*Esto es para el h2 de cars*/
+.opinion-texto-cars {
+    flex: 1;
+}
+
+.opinion-texto-cars h2 {
+    color: black;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.opinion-texto-cars p {
     font-size: 1.2em;
     line-height: 1.7;
     margin-bottom: 15px;
@@ -1365,5 +1386,214 @@ html {
 
     .floating-game-btn .btn-text {
         display: none;
+    }
+}
+
+.feedback {
+    margin-left: 10px;
+    font-size: 1.2em;
+}
+
+/* Menú hamburguesa para móviles */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ff6b00;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .barra ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    .barra ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+}
+
+body.dark {
+    background: #111;
+    color: #ddd;
+}
+
+body.dark .barra {
+    background: #000;
+}
+
+body.dark a {
+    color: #ff6b00;
+}
+
+/* Botón Volver Arriba - Estilo JDM */
+#btnVolverArriba {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #ff6b00, #c00);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 107, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 1000;
+    text-align: center;
+}
+
+#btnVolverArriba.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    text-align: center;
+}
+
+#btnVolverArriba:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(255, 107, 0, 0.8);
+    animation: pulse 1.5s infinite;
+    text-align: center;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 107, 0, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 0, 0);
+    }
+}
+
+#progressBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background: linear-gradient(90deg, #ff6b00, #c00);
+    z-index: 9999;
+    transition: width 0.2s ease;
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.8);
+}
+
+/* Loader JDM full screen */
+#jdmLoader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease;
+}
+
+#jdmLoader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 1s;
+}
+
+/* Coche neón animado (usa un GIF o SVG simple) */
+.neon-car {
+    width: 300px;
+    height: 150px;
+    background: url('/Imagenes/skyline.gif') center/cover no-repeat;
+    /* Cambia por tu GIF JDM */
+    filter: drop-shadow(0 0 20px #ff6b00);
+    animation: drift 4s infinite linear;
+}
+
+@keyframes drift {
+    0% {
+        transform: translateX(-100px) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateX(100px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateX(-100px) rotate(-5deg);
+    }
+}
+
+/* Texto neón */
+.loading-text {
+    color: #ff6b00;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0 0 20px #ff6b00;
+    margin: 20px 0;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Barra de progreso nitro */
+.progress-bar {
+    width: 300px;
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff6b00, #c00);
+    animation: loading 3s infinite;
+    box-shadow: 0 0 20px #ff6b00;
+}
+
+@keyframes loading {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
     }
 }

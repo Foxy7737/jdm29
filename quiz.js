@@ -1,83 +1,85 @@
-// quiz.js - Quizzes interactivos con corrección y puntuación
+// quiz.js - Quizzes con respuestas ocultas (solo admin ve correctas desde inicio)
 
 document.addEventListener('DOMContentLoaded', function () {
-    const forms = document.querySelectorAll('.quiz-form');
+    const usuarioLogueado = localStorage.getItem('usuarioLogueado');
+    const esLogueado = !!usuarioLogueado;  // Verdadero si hay cualquier usuario logueado
 
-    let totalQuestions = forms.length;
-    let correctAnswers = 0;
-    let answeredQuestions = 0;
+    const forms = document.querySelectorAll('form');
 
-    forms.forEach((form, index) => {
+    forms.forEach(form => {
         const radios = form.querySelectorAll('input[type="radio"]');
 
-        radios.forEach(radio => {
-            radio.addEventListener('change', function () {
-                // Evitar responder varias veces la misma pregunta
-                if (form.classList.contains('answered')) return;
+        if (esLogueado) {
+            // Para usuarios logueados, mostrar correctas desde el principio
+            radios.forEach(radio => {
+                const label = radio.parentNode;
+                const feedback = document.createElement('span');
+                feedback.className = 'feedback';
+                label.appendChild(feedback);
 
-                form.classList.add('answered');
-                answeredQuestions++;
-
-                // Mostrar feedback
-                const labels = form.querySelectorAll('label');
-                labels.forEach(label => {
-                    const input = label.querySelector('input');
-                    const feedback = label.querySelector('.feedback');
-
-                    if (input.getAttribute('data-correct') === 'true') {
-                        label.style.color = '#00ff00';
-                        if (feedback) feedback.textContent = '✅';
-                        correctAnswers++;
-                    } else {
-                        label.style.color = '#ff4444';
-                        if (feedback) feedback.textContent = '❌';
-                    }
-
-                    // Deshabilitar todos los radios de esta pregunta
-                    input.disabled = true;
-                });
-
-                // Si ha respondido todas, mostrar resultado
-                if (answeredQuestions === totalQuestions) {
-                    showFinalScore();
+                if (radio.getAttribute('data-correct') === 'true') {
+                    feedback.textContent = '✅';
+                    label.style.color = '#00ff00';
+                } else {
+                    feedback.textContent = '❌';
+                    label.style.color = '#ff4444';
                 }
             });
-        });
-    });
-
-    function showFinalScore() {
-        let message = '';
-        const percentage = Math.round((correctAnswers / totalQuestions) * 100);
-
-        if (percentage === 100) {
-            message = `¡PERFECTO! ${correctAnswers}/${totalQuestions} 🎉<br>Eres un auténtico experto en coches JDM 🚗💨`;
-        } else if (percentage >= 80) {
-            message = `¡Excelente! ${correctAnswers}/${totalQuestions} 🔥<br>Gran conocimiento, crack`;
-        } else if (percentage >= 60) {
-            message = `¡Bien! ${correctAnswers}/${totalQuestions} 👍<br>No está mal, sigue así`;
-        } else if (percentage >= 40) {
-            message = `Ánimo: ${correctAnswers}/${totalQuestions} 😅<br>Hay margen de mejora`;
         } else {
-            message = `Vaya... ${correctAnswers}/${totalQuestions} 🤏<br>¡Repasa y vuelve a intentarlo!`;
-        }
+            // Para no logueados: esconder hasta responder
+            radios.forEach(radio => {
+                radio.addEventListener('change', function () {
+                    if (form.classList.contains('answered')) return;
 
-        // Crear div de resultado (solo una vez)
-        if (!document.getElementById('quiz-final-result')) {
-            const resultDiv = document.createElement('div');
-            resultDiv.id = 'quiz-final-result';
-            resultDiv.innerHTML = `
-                <h2 style="text-align:center; color:#ff6b00; margin:40px 0 20px;">¡Resultado final!</h2>
-                <div style="text-align:center; padding:30px; background:#222; border-radius:15px; font-size:1.4em; color:white;">
-                    ${message}
-                    <br><br>
-                    <button onclick="location.reload()" style="padding:12px 24px; background:#ff6b00; color:white; border:none; border-radius:50px; font-size:1em; cursor:pointer;">
-                        Volver a intentarlo
-                    </button>
-                </div>
-            `;
-            // Insertar después del último quiz
-            const container = document.querySelector('.container') || document.body;
-            container.appendChild(resultDiv);
+                    form.classList.add('answered');
+
+                    radios.forEach(r => {
+                        const label = r.parentNode;
+                        const feedback = document.createElement('span');
+                        feedback.className = 'feedback';
+                        label.appendChild(feedback);
+
+                        if (r.getAttribute('data-correct') === 'true') {
+                            feedback.textContent = '✅';
+                            label.style.color = '#00ff00';
+                        } else {
+                            feedback.textContent = '❌';
+                            label.style.color = '#ff4444';
+                        }
+                        r.disabled = true;
+                    });
+                    // Calcular puntuación
+                    let correctas = 0;
+                    const totalPreguntas = document.querySelectorAll('form.quiz-form').length;
+
+                    document.querySelectorAll('form.quiz-form').forEach(form => {
+                        const seleccionado = form.querySelector('input[type="radio"]:checked');
+                        if (seleccionado && seleccionado.getAttribute('data-correct') === 'true') {
+                            correctas++;
+                        }
+                    });
+
+                    // Mostrar resultado final
+                    if (document.querySelectorAll('form.answered').length === totalPreguntas) {
+                        const mensajeFinal = document.createElement('div');
+                        mensajeFinal.style = 'margin: 40px auto; padding: 20px; background: #222; border-radius: 15px; max-width: 500px; text-align: center; font-size: 1.4em;';
+                        mensajeFinal.innerHTML = `
+        <strong>¡Quiz completado!</strong><br>
+        Has acertado <span style="color: #00ff00;">${correctas}</span> de ${totalPreguntas}<br><br>
+        ${correctas === totalPreguntas ? '🎉 ¡Perfecto! Eres un experto JDM' : '¡Sigue practicando! 🚗'}
+    `;
+                        document.querySelector('.quiz-container')?.appendChild(mensajeFinal);
+                    }
+                });
+            });
         }
-    }
+    });
 });
+
+// Guarda puntuación por usuario
+const usuario = localStorage.getItem('usuarioLogueado');
+if (usuario) {
+    let scores = JSON.parse(localStorage.getItem('quizScores_' + usuario) || '{}');
+    scores[window.location.pathname] = { score: correctas, total: totalPreguntas, fecha: new Date().toLocaleDateString() };
+    localStorage.setItem('quizScores_' + usuario, JSON.stringify(scores));
+}

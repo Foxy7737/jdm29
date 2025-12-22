@@ -4,14 +4,25 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina wed sobre coches</title>
+    <title>JDM World - F1</title>
     <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/z-icon">
     <link rel="stylesheet" href="Style.css">
+    <!-- SEO avanzado 2025 -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tu nick o nombre">
+
+    <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
+    <meta property="og:title" content="JDM World - Nissan GT-R R34">
+    <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
+    <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
+    <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
+    <meta property="og:type" content="article">
 </head>
 
 <body class="f1">
     <nav class="barra">
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
                 <a class="dropbtn">Peliculas</a>
@@ -44,18 +55,21 @@
                 <div class="dropdown-content">
                     <a href="Prueba 13.html">Iniciar Sesión</a>
                     <a href="Prueba 14.html">Registrarse</a>
-                    <a href="Prueba 15.html">Usuario</a>
                 </div>
             </li>
-            <div class="audio-player">
-                <audio id="background-audio" loop>
-                    <source src="/Audios/bandoleros.ogg" type="audio/ogg">
-                    Tu navegador no soporta audio.
-                </audio>
-                <button id="audio-toggle" class="audio-btn">
-                    🔊 Música ON
-                </button>
-            </div>
+            <li><a href="Prueba 15.html">Usuario</a></li>
+        </ul>
+        <div class="audio-player">
+            <audio id="background-audio" loop>
+                <source src="/Audios/bandoleros.ogg" type="audio/ogg">
+                Tu navegador no soporta audio.
+            </audio>
+            <button id="audio-toggle" class="audio-btn">
+                🔊 Música ON
+            </button>
+            <button id="darkModeToggle"
+                style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
+        </div>
         </ul>
     </nav>
     <header class="f1">
@@ -174,6 +188,57 @@
     <div style="text-align: center;"><a href="https://es.wikipedia.org/wiki/F1:_la_pel%C3%ADcula" target="_blank"
             class="button button3">Wikipedia</a>
     </div><br>
+    <section class="opinion-visual">
+        <div class="opinion-texto">
+            <h2>Por qué F1 (película 2025) es especial para mí 🏎️🍿</h2>
+            <p>
+                Esta película es un sueño para fans de F1: rodada en circuitos reales durante GPs, con cámaras en los
+                coches y colaboración total de la FIA y equipos.<br><br>
+                Brad Pitt pilotando un F1 modificado a los 60 años... ¡respeto máximo!
+            </p>
+        </div>
+        <div class="opinion-imagen">
+            <img src="Imagenes/f1 2.jpg" alt="Nissan GT-R JDM">
+        </div>
+    </section>
+    <div class="container" id="dotted">
+        <h2>Preguntas sobre F1</h2>
+        <p>1. ¿Cuál es el nombre del protagonista de la película?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q1" data-correct="false">Lewis Hamilton</label><br>
+            <label><input type="radio" name="q1" data-correct="true">Sonny Hayes</label><br>
+            <label><input type="radio" name="q1" data-correct="false">Joshua Pearce</label><br>
+            <label><input type="radio" name="q1" data-correct="false">Rubens Rubello</label>
+        </form>
+        <p>2. ¿Quién es el actor principal que interpreta a Sonny Hayes?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q2" data-correct="false">Damson Idris</label><br>
+            <label><input type="radio" name="q2" data-correct="true">Brad Pitt</label><br>
+            <label><input type="radio" name="q2" data-correct="false">Javier Bardem</label><br>
+            <label><input type="radio" name="q2" data-correct="false">Kerry Condon</label>
+        </form>
+        <p>3. ¿En qué año se estrena la película?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q3" data-correct="false">2024</label><br>
+            <label><input type="radio" name="q3" data-correct="true">2025</label><br>
+            <label><input type="radio" name="q3" data-correct="false">2026</label><br>
+            <label><input type="radio" name="q3" data-correct="false">2023</label>
+        </form>
+        <p>4. ¿Quién es el director de la película?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q4" data-correct="false">Lewis Hamilton</label><br>
+            <label><input type="radio" name="q4" data-correct="true">Joseph Kosinski</label><br>
+            <label><input type="radio" name="q4" data-correct="false">Brad Pitt</label><br>
+            <label><input type="radio" name="q4" data-correct="false">Javier Bardem</label>
+        </form>
+        <p>5. ¿Qué piloto de F1 real aparece en la película?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q5" data-correct="false">Fernando Alonso</label><br>
+            <label><input type="radio" name="q5" data-correct="true">Lewis Hamilton</label><br>
+            <label><input type="radio" name="q5" data-correct="false">Sebastian Vettel</label><br>
+            <label><input type="radio" name="q5" data-correct="false">Charles Leclerc</label>
+        </form>
+    </div><br>
     <!-- === MI OPINIÓN PERSONAL Y VÍDEOS DE F1 (2025) === -->
     <div style="margin: 80px 0; text-align: center;">
         <h2 style="color: #ff6b00; margin-bottom: 30px; font-size: 2em;">
@@ -196,7 +261,7 @@
             <h3 style="color: #ff8b33; margin-bottom: 20px; font-size: 1.6em;">
                 Tráiler oficial de F1 (2025)
             </h3>
-            <iframe width="100%" height="500" src="https://www.yout-ube.com/watch?v=BuZFpr_l9G4"
+            <iframe width="100%" height="500" src="https://www.yout-ube.com/watch?v=H4qYzIrxRds"
                 title="Tráiler oficial F1 película 2025" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
@@ -233,84 +298,6 @@
             </ol>
         </div>
     </div>
-    <div class="container" id="dotted">
-        <h2>Preguntas</h2>
-        <p>1. ¿Quién dirige F1: La película?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Christopher Nolan
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Joseph Kosinski
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Ridley Scott
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">James Cameron
-                <span class="feedback incorrecto">❌</span>
-            </label>
-        </form>
-        <p>2. ¿Qué actor interpreta al piloto veterano Sonny Hayes?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Tom Cruise
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Javier Bardem
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Brad Pitt
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Damson Idris
-                <span class="feedback incorrecto">❌</span>
-            </label>
-        </form>
-        <p>3. ¿Qué compositor se encargó de la banda sonora?</p>
-        <form>
-            <label><input type="radio" name="color" id="correcto">Hans Zimmer
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">John Williams
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Ramin Djawadi
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Alan Silvestri
-                <span class="feedback incorrecto">❌</span>
-            </label>
-        </form>
-        <p>4. ¿En qué año se estrenó internacionalmente la película?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">2023
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">2025
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">2024
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">2026
-                <span class="feedback incorrecto">❌</span>
-            </label>
-        </form>
-        <p>5. ¿Qué piloto real de Fórmula 1 participó como productor?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Fernando Alonso
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Lewis Hamilton
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Sebastian Vettel
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Charles Leclerc
-                <span class="feedback incorrecto">❌</span>
-            </label>
-        </form>
-    </div><br>
     <!--Esto es un codigo de un gif-->
     <div style="text-align: center;"><img src="/Imagenes/f1.gif"></div>
     <ol class="pagination">
@@ -322,8 +309,10 @@
         <li><a class="active" href="Prueba 6.html">5</a></li>
         <li><a class="disabled" href="Prueba 6.html">&raquo;</a></li>
     </ol>
+    <div id="progressBar"></div>
     <script src="session.js"></script>
     <script src="quiz.js"></script>
+    <script src="scroll.js"></script>
 </body>
 
 </html>

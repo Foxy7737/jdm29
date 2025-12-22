@@ -13,12 +13,33 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600&display=swap"
     rel="stylesheet">
+  <meta property="og:title" content="JDM World - Coches japoneses, películas y videojuegos">
+  <meta property="og:image" content="https://tuweb.com/Imagenes/preview.jpg">
+  <!-- SEO avanzado 2025 -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Tu nick o nombre">
+
+  <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
+  <meta property="og:title" content="JDM World - Nissan GT-R R34">
+  <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
+  <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
+  <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
+  <meta property="og:type" content="article">
 </head>
 
 <body>
+  <!--Este codigo es para una animacion al abrir la pagina-->
+  <div id="jdmLoader">
+    <div class="loader-content">
+      <div class="neon-car"></div>
+      <div class="loading-text">Cargando nitro... 💨</div>
+      <div class="progress-bar"></div>
+    </div>
+  </div>
   <!--Este codigo es una barra de tarreas horizontal-->
   <nav class="barra">
-    <ul>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul id="menu">
       <li><a href="index.html">Inicio</a></li>
       <li class="dropdown">
         <a class="dropbtn">Peliculas</a>
@@ -51,19 +72,20 @@
         <div class="dropdown-content">
           <a href="Prueba 13.html">Iniciar Sesión</a>
           <a href="Prueba 14.html">Registrarse</a>
-          <a href="Prueba 15.html">Usuario</a>
         </div>
       </li>
       <li><a href="Prueba 15.html">Usuario</a></li>
     </ul>
     <div class="audio-player">
       <audio id="background-audio" loop>
-        <source src="Audios/bandoleros.ogg" type="audio/ogg">
+        <source src="/Audios/bandoleros.ogg" type="audio/ogg">
         Tu navegador no soporta audio.
       </audio>
       <button id="audio-toggle" class="audio-btn">
         🔊 Música ON
-      </button>
+      </button><br>
+      <button id="darkModeToggle"
+        style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
     </div>
   </nav>
   <!-- Contenido personalizado según intereses -->
@@ -83,6 +105,7 @@
   <i>
     <h1>Japanese domestic market(JDM)</h1>
   </i>
+  <div id="progressBar"></div>
   <!--Esta b es para que la letra este en negrita-->
   <p class="pagina"><i>El <b><i>japanese domestic market </b>(<b>JDM</b>, en español: <b>mercado interno japonés</b>) es
       el término es
@@ -376,39 +399,37 @@
   <footer class="firma">
     <p>Esta web está hecha por mí, por pasión al mundo del motor 🚗🔥</p>
   </footer>
-  <div class="container" id="dotted">
-    <h2>Preguntas</h2>
-    <p>1. ¿De que va esta pagina web?</p>
-    <form>
-      <label><input type="radio" name="color" id="incorrecto"> Va de coches
-        <span class="feedback incorrecto">❌</span>
-      </label><br>
-      <label><input type="radio" name="color" id="correcto"> Va de peliculas y videojuegos de coches
-        <span class="feedback correcto">✅</span>
-      </label><br>
-      <label><input type="radio" name="color" id="incorrecto"> VA solo de peliculas
-        <span class="feedback incorrecto">❌</span>
-      </label><br>
-      <label><input type="radio" name="color" id="incorrecto"> Va solo de coches JDM
-        <span class="feedback incorrecto">❌</span>
-      </label>
+  <div class="quiz-container" id="dotted">
+    <h2>Preguntas sobre la web</h2>
+
+    <p>1. ¿De qué va esta página web?</p>
+    <form class="quiz-form">
+      <label><input type="radio" name="q1" data-correct="false"> Va de coches</label><br>
+      <label><input type="radio" name="q1" data-correct="true"> Va de películas y videojuegos de coches</label><br>
+      <label><input type="radio" name="q1" data-correct="false"> VA solo de películas</label><br>
+      <label><input type="radio" name="q1" data-correct="false"> Va solo de coches JDM</label>
     </form>
-    <p>2. ¿Que clases de peliculas hay segun las fotos, los audios, las listas, los gifs y los videos?</p>
-    <form>
-      <label><input type="radio" name="color" id="incorrecto">Cars y Fast and Furious
-        <span class="feedback incorrecto">❌</span>
-      </label><br>
-      <label><input type="radio" name="color" id="incorrecto">Fast and Furious, F1 y Gran Turismo
-        <span class="feedback incorrecto">❌</span>
-      </label><br>
-      <label><input type="radio" name="color" id="correcto">Fast and Furious, F1, Gran Turismo Y Need for Speed
-        <span class="feedback correcto">✅</span>
-      </label><br>
-      <label><input type="radio" name="color" id="incorrecto">Ninguna es correcta
-        <span class="feedback incorrecto">❌</span>
-      </label><br>
+
+    <p>2. ¿Qué clases de películas hay según las fotos, audios, listas, gifs y videos?</p>
+    <form class="quiz-form">
+      <label><input type="radio" name="q2" data-correct="false"> Cars y Fast and Furious</label><br>
+      <label><input type="radio" name="q2" data-correct="false"> Fast and Furious, F1 y Gran Turismo</label><br>
+      <label><input type="radio" name="q2" data-correct="true"> Fast and Furious, F1, Gran Turismo y Need for
+        Speed</label><br>
+      <label><input type="radio" name="q2" data-correct="false"> Ninguna es correcta</label>
     </form>
   </div>
+  <p style="text-align: center; color: #aaa; font-size: 0.9em;">
+    Actualizado el 22 de diciembre de 2025 | ¿Tienes sugerencias? ¡Comenta abajo!
+  </p>
+  <section class="comentarios" style="background: #222; padding: 20px; border-radius: 15px; margin: 40px 0;">
+    <h3 style="color: #ff6b00;">¿Qué opinas? Deja tu comentario</h3>
+    <textarea id="comentario" placeholder="Ej: '¡El R34 es el rey!' (guarda en tu navegador)" rows="3"
+      style="width: 100%; border-radius: 3px; padding: 5px;"></textarea>
+    <button onclick="guardarComentario()"
+      style="margin-top: 10px; padding: 10px; background: #ff6b00; color: white; border: none; border-radius: 5px;">Guardar</button>
+    <div id="listaComentarios"></div>
+  </section>
   <div style="text-align: center; margin: 60px 0;">
     <details
       style="display: inline-block; background: #222; padding: 20px; border-radius: 15px; box-shadow: 0 4px 15px rgba(255,107,0,0.3);">
@@ -437,6 +458,7 @@
   <script src="theme.js"></script>
   <script src="quiz.js"></script>
   <script src="scroll.js"></script>
+  <script src="comments.js"></script>
 </body>
 
 </html>

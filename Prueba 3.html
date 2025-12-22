@@ -4,14 +4,25 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina wed sobre coches</title>
+    <title>JDM World - Cars</title>
     <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/z-icon">
     <link rel="stylesheet" href="Style.css">
+    <!-- SEO avanzado 2025 -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tu nick o nombre">
+
+    <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
+    <meta property="og:title" content="JDM World - Nissan GT-R R34">
+    <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
+    <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
+    <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
+    <meta property="og:type" content="article">
 </head>
 
 <body class="cars">
     <nav class="barra">
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
                 <a class="dropbtn">Peliculas</a>
@@ -44,9 +55,9 @@
                 <div class="dropdown-content">
                     <a href="Prueba 13.html">Iniciar Sesión</a>
                     <a href="Prueba 14.html">Registrarse</a>
-                    <a href="Prueba 15.html">Usuario</a>
                 </div>
             </li>
+            <li><a href="Prueba 15.html">Usuario</a></li>
         </ul>
         <div class="audio-player">
             <audio id="background-audio" loop>
@@ -56,6 +67,8 @@
             <button id="audio-toggle" class="audio-btn">
                 🔊 Música ON
             </button>
+            <button id="darkModeToggle"
+                style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
         </div>
     </nav>
     <header class="cars">
@@ -211,7 +224,7 @@
     <div style="text-align: center;"><a href="https://es.wikipedia.org/wiki/Cars_(franquicia)" target="_blank"
             class="button button3">Wikipedia</a></div><br>
     <section class="opinion-visual">
-        <div class="opinion-texto">
+        <div class="opinion-texto-cars">
             <h2>Por qué Cars es especial para mí</h2>
             <p>
                 Aunque parezca una película infantil, Cars tiene un mensaje muy fuerte
@@ -223,90 +236,50 @@
         </div>
     </section>
     <div class="container" id="dotted">
-        <h2>Preguntas</h2>
-        <p>1. ¿Como se llama el protagonista de Cars?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Doc Hudson
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Mate
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Rayo McQueen
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Sally Carrera
-                <span class="feedback incorrecto">❌</span>
-            </label>
+        <h2>Preguntas sobre Cars</h2>
+        <p>1. ¿Cuál es el nombre del protagonista de Cars?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q1" data-correct="false">Mate</label><br>
+            <label><input type="radio" name="q1" data-correct="true">Rayo McQueen</label><br>
+            <label><input type="radio" name="q1" data-correct="false">Doc Hudson</label><br>
+            <label><input type="radio" name="q1" data-correct="false">Sally Carrera</label>
         </form>
-        <p>2. ¿En qué pueblo se queda atrapado Rayo McQueen?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Piston Town
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Radiador Springs
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Gasoline City
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Motorville
-                <span class="feedback incorrecto">❌</span>
-            </label>
+        <p>2. ¿Cuál es el nombre del pueblo donde termina Rayo McQueen?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q2" data-correct="false">Rust-eze</label><br>
+            <label><input type="radio" name="q2" data-correct="false">Pistón City</label><br>
+            <label><input type="radio" name="q2" data-correct="true">Radiator Springs</label><br>
+            <label><input type="radio" name="q2" data-correct="false">Los Ángeles</label>
         </form>
-        <p>3. ¿Qué tipo de vehículo es Mate?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Coche Policía
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Camión de Bomberos
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Coche Deportivo
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Grua Oxidada
-                <span class="feedback correcto">✅</span>
-            </label>
+        <p>3. ¿Quién es el mejor amigo de Rayo McQueen?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q3" data-correct="false">Chick Hicks</label><br>
+            <label><input type="radio" name="q3" data-correct="true">Mate</label><br>
+            <label><input type="radio" name="q3" data-correct="false">Francesco Bernoulli</label><br>
+            <label><input type="radio" name="q3" data-correct="false">Strip Weathers</label>
         </form>
-        <p>4. ¿Quién es el juez de Radiador Springs?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Filmore
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Sally Carrera
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Ramone
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Doc Hudson
-                <span class="feedback correcto">✅</span>
-            </label>
+        <p>4. ¿Qué número lleva Rayo McQueen en su coche?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q4" data-correct="false">42</label><br>
+            <label><input type="radio" name="q4" data-correct="false">86</label><br>
+            <label><input type="radio" name="q4" data-correct="true">95</label><br>
+            <label><input type="radio" name="q4" data-correct="false">24</label>
         </form>
-        <p>5. ¿Qué carrera quiere ganar Rayo McQueen al inicio de la película?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">La Carrera del Desierto
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">La Copa Mundial
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">La Copa Pistón
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">El Gran Premio
-                <span class="feedback incorrecto">❌</span>
-            </label>
+        <p>5. ¿Cómo se llama la carrera principal de la película?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q5" data-correct="false">La Carrera del Desierto</label><br>
+            <label><input type="radio" name="q5" data-correct="false">La Copa Mundial</label><br>
+            <label><input type="radio" name="q5" data-correct="true">La Copa Pistón</label><br>
+            <label><input type="radio" name="q5" data-correct="false">El Gran Premio</label>
         </form>
     </div><br>
     <!-- === MI OPINIÓN PERSONAL Y VÍDEO DE CARS === -->
     <div style="margin: 80px 0; text-align: center;">
-        <h2 style="color: #ff6b00; margin-bottom: 30px; font-size: 2em;">
+        <h2 style="color: black; margin-bottom: 30px; font-size: 2em;">
             Mi opinión personal sobre Cars 🚗⚡
         </h2>
 
-        <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.3em; line-height: 1.7; color: #eee;">
+        <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.3em; line-height: 1.7; color: blue;">
             Para mí, <strong>Cars</strong> no es solo una peli infantil... es una obra maestra del motor.<br>
             Me flipa cómo convierten los coches en personajes con tanta personalidad: Rayo McQueen es puro ego al
             principio y luego aprende humildad, Mate es el amigo leal que todos queremos, y Doc Hudson... ¡un leyenda
@@ -317,7 +290,7 @@
 
         <!-- Vídeo embed del tráiler oficial en español -->
         <div style="max-width: 900px; margin: 0 auto 50px;">
-            <h3 style="color: #ff8b33; margin-bottom: 20px; font-size: 1.6em;">
+            <h3 style="color: black; margin-bottom: 20px; font-size: 1.6em;">
                 Tráiler oficial de Cars (2006)
             </h3>
             <iframe width="100%" height="500" src="https://www.yout-ube.com/watch?v=1uq5eJHwio4"
@@ -325,7 +298,7 @@
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
-            <p style="margin-top: 15px; font-style: italic; color: #aaa;">
+            <p style="margin-top: 15px; font-style: italic; color: gainsboro;">
                 "¡Ka-chow!" ⚡ La intro ya es icónica
             </p>
         </div>
@@ -353,8 +326,10 @@
         <li><a href="Prueba 6.html">5</a></li>
         <li><a href="Prueba 4.html">&raquo;</a></li>
     </ol>
+    <div id="progressBar"></div>
     <script src="session.js"></script>
     <script src="quiz.js"></script>
+    <script src="scroll.js"></script>
 </body>
 
 </html>

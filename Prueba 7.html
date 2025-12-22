@@ -4,15 +4,26 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina wed sobre coches</title>
+    <title>JDM World - Need Juego</title>
     <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/z-icon">
     <link rel="stylesheet" href="Style.css">
+    <!-- SEO avanzado 2025 -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tu nick o nombre">
+
+    <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
+    <meta property="og:title" content="JDM World - Nissan GT-R R34">
+    <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
+    <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
+    <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
+    <meta property="og:type" content="article">
 </head>
 
 <body class="need-juego">
     <!--Este codigo es una barra de tarreas horizontal-->
     <nav class="barra">
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
                 <a class="dropbtn">Peliculas</a>
@@ -45,19 +56,21 @@
                 <div class="dropdown-content">
                     <a href="Prueba 13.html">Iniciar Sesión</a>
                     <a href="Prueba 14.html">Registrarse</a>
-                    <a href="Prueba 15.html">Usuario</a>
                 </div>
             </li>
-            <div class="audio-player">
-                <audio id="background-audio" loop>
-                    <source src="/Audios/bandoleros.ogg" type="audio/ogg">
-                    Tu navegador no soporta audio.
-                </audio>
-                <button id="audio-toggle" class="audio-btn">
-                    🔊 Música ON
-                </button>
-            </div>
+            <li><a href="Prueba 15.html">Usuario</a></li>
         </ul>
+        <div class="audio-player">
+            <audio id="background-audio" loop>
+                <source src="/Audios/bandoleros.ogg" type="audio/ogg">
+                Tu navegador no soporta audio.
+            </audio>
+            <button id="audio-toggle" class="audio-btn">
+                🔊 Música ON
+            </button>
+            <button id="darkModeToggle"
+                style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
+        </div>
     </nav>
     <header class="need">
         <img class="need" src="Imagenes/logo need.png" width="30%">
@@ -250,27 +263,102 @@
         </div>
     </section>
     <div class="container" id="dotted">
-        <h2>Preguntas</h2>
+        <p>1. ¿Cuál es el primer videojuego de Need for Speed y en qué año se lanzó?</p>
         <form>
-            <label for="fname">1. ¿Cuál fue el nombre del primer juego de la serie Need for Speed y en qué año se
-                lanzó?</label>
-            <input type="text" id="fname" name="fname" placeholder="Respuesta" required>
-            <label for="lname">2. ¿Cuántos corredores componen la Blacklist en Need for Speed: Most Wanted
-                (2005)?</label>
-            <input type="text" id="lname" name="lname" placeholder="Respuesta" required>
-            <label for="lname">3. ¿En qué entrega de Need for Speed se introdujo el enfoque principal en carreras
-                callejeras y tuning de autos?</label>
-            <input type="text" id="lname" name="lname" placeholder="Respuesta" required>
-            <label for="fname"> 4. ¿Cuál es el nombre del líder de la Blacklist (el número 1) en Need for Speed: Most
-                Wanted (2005)?</label>
-            <input type="text" id="lname" name="lname" placeholder="Respuesta" required>
-            <label for="fname">5. ¿Qué juego de Need for Speed, lanzado en 2022, presenta un estilo artístico cel-shaded
-                y carreras con policías diurnas y nocturnas?</label>
-            <input type="text" id="lname" name="lname" placeholder="Respuesta" required>
-            <br>
-            <input type="submit" value="Submit">
+            <label><input type="radio" name="color" data-correct="false"> Need for Speed Underground 2003</label><br>
+            <label><input type="radio" name="color" data-correct="true"> The Need for Speed 1994</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Need for Speed Most Wanted 2005</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Need for Speed Carbon 2006</label>
+        </form>
+        <p>2. ¿Cuántos corredores componen la Blacklist en Need for Speed: Most Wanted (2005)?</p>
+        <form>
+            <label><input type="radio" name="color" data-correct="false"> 10</label><br>
+            <label><input type="radio" name="color" data-correct="false"> 12</label><br>
+            <label><input type="radio" name="color" data-correct="true"> 15</label><br>
+            <label><input type="radio" name="color" data-correct="false"> 20</label>
+        </form>
+        <p>3. ¿En qué entrega de Need for Speed se introdujo el enfoque principal en carreras callejeras y tuning de
+            autos?</p>
+        <form>
+            <label><input type="radio" name="color" data-correct="false"> Need for Speed Most Wanted</label><br>
+            <label><input type="radio" name="color" data-correct="true"> Need for Speed Underground</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Need for Speed Carbon</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Need for Speed Heat</label>
+        </form>
+        <p>4. ¿Cuál es el nombre del líder de la Blacklist (el número 1) en Need for Speed: Most Wanted (2005)?</p>
+        <form>
+            <label><input type="radio" name="color" data-correct="false"> Bull</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Ronnie</label><br>
+            <label><input type="radio" name="color" data-correct="true"> Razor</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Webster</label>
+        </form>
+        <p>5. ¿Qué juego de Need for Speed, lanzado en 2022, presenta un estilo artístico cel-shaded y carreras con
+            policías diurnas y nocturnas?</p>
+        <form>
+            <label><input type="radio" name="color" data-correct="false"> Need for Speed Heat</label><br>
+            <label><input type="radio" name="color" data-correct="true"> Need for Speed Unbound</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Need for Speed Payback</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Need for Speed Most Wanted</label>
         </form>
     </div><br>
+    <!-- === MI OPINIÓN PERSONAL Y VÍDEOS DE NEED FOR SPEED (VIDEOJUEGO) === -->
+    <div style="margin: 80px 0; text-align: center;">
+        <h2 style="color: #ff6b00; margin-bottom: 30px; font-size: 2em;">
+            Mi opinión personal sobre Need for Speed 🎮🏎️
+        </h2>
+
+        <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.3em; line-height: 1.7; color: black;">
+            Need for Speed es LA saga de carreras callejeras. Empecé con Underground 2 y desde entonces soy fan
+            total.<br>
+            Lo que me engancha: el tuning infinito, persecuciones policiales épicas y soundtracks que te ponen en modo
+            drift.<br><br>
+            Most Wanted (2005) es mi GOAT: la Blacklist, Razor como villano y ese BMW M3 E46... ¡horas infinitas! NFS
+            Heat (2019) revivió la saga con día/noche y policía implacable.<br>
+            En 2025, NFS Unbound sigue siendo el rey del estilo cel-shaded.
+        </p>
+
+        <!-- Tráiler de Most Wanted (el clásico) -->
+        <div style="max-width: 900px; margin: 0 auto 50px;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px; font-size: 1.6em;">
+                Most Wanted (2005) - El rey eterno
+            </h3>
+            <iframe width="100%" height="500" src="https://www.yout-ube.com/watch?v=8OfpV6ff20E"
+                title="Need for Speed Most Wanted trailer" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p style="margin-top: 15px; font-style: italic; color: gainsboro;">
+                "You have 1 minute left..." → Adrenalina máxima
+            </p>
+        </div>
+
+        <!-- Gameplay moderno: Unbound -->
+        <div style="max-width: 900px; margin: 0 auto 50px;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px; font-size: 1.6em;">
+                NFS Unbound (2022) - Estilo cel-shaded brutal
+            </h3>
+            <iframe width="100%" height="500" src="https://www.yout-ube.com/watch?v=yh89-4oy0m4"
+                title="NFS Unbound gameplay" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p style="margin-top: 15px; font-style: italic; color: gainsboro;">
+                Día/noche, graffiti y drifts infinitos... ¡moderno y fresco!
+            </p>
+        </div>
+
+        <!-- Mi top de juegos NFS -->
+        <div style="background: #222; padding: 30px; border-radius: 15px; max-width: 700px; margin: 0 auto;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px;">Mi Top 5 juegos NFS</h3>
+            <ol style="text-align: left; font-size: 1.2em; line-height: 1.8; margin-left: 40px;">
+                <li><strong>Most Wanted (2005)</strong> → Perfección absoluta</li>
+                <li><strong>Underground 2</strong> → Tuning rey</li>
+                <li><strong>Heat (2019)</strong> → Policía implacable</li>
+                <li><strong>Unbound (2022)</strong> → Arte cel-shaded</li>
+                <li><strong>Carbon (2006)</strong> → Canyon duels épicos</li>
+            </ol>
+        </div>
+    </div>
     <!--Esto es un codigo de un gif-->
     <div style="text-align: center;"><img src="/Imagenes/speed.gif" alt="Un gtr" width="25%"></div>
     <ol class="pagination">
@@ -280,8 +368,10 @@
         <li><a href="Prueba 9.html">3</a></li>
         <li><a href="Prueba 8.html">&raquo;</a></li>
     </ol>
+    <div id="progressBar"></div>
     <script src="session.js"></script>
     <script src="quiz.js"></script>
+    <script src="scroll.js"></script>
 </body>
 
 </html>

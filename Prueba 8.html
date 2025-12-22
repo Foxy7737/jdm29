@@ -4,15 +4,26 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina wed sobre coches</title>
+    <title>JDM World - Gran Turismo Juego</title>
     <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/z-icon">
     <link rel="stylesheet" href="Style.css">
+    <!-- SEO avanzado 2025 -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tu nick o nombre">
+
+    <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
+    <meta property="og:title" content="JDM World - Nissan GT-R R34">
+    <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
+    <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
+    <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
+    <meta property="og:type" content="article">
 </head>
 
 <body class="gran">
     <!--Este codigo es una barra de tarreas horizontal-->
     <nav class="barra">
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
                 <a class="dropbtn">Peliculas</a>
@@ -45,19 +56,21 @@
                 <div class="dropdown-content">
                     <a href="Prueba 13.html">Iniciar Sesión</a>
                     <a href="Prueba 14.html">Registrarse</a>
-                    <a href="Prueba 15.html">Usuario</a>
                 </div>
             </li>
-            <div class="audio-player">
-                <audio id="background-audio" loop>
-                    <source src="/Audios/bandoleros.ogg" type="audio/ogg">
-                    Tu navegador no soporta audio.
-                </audio>
-                <button id="audio-toggle" class="audio-btn">
-                    🔊 Música ON
-                </button>
-            </div>
+            <li><a href="Prueba 15.html">Usuario</a></li>
         </ul>
+        <div class="audio-player">
+            <audio id="background-audio" loop>
+                <source src="/Audios/bandoleros.ogg" type="audio/ogg">
+                Tu navegador no soporta audio.
+            </audio>
+            <button id="audio-toggle" class="audio-btn">
+                🔊 Música ON
+            </button>
+            <button id="darkModeToggle"
+                style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
+        </div>
     </nav>
     <header class="gran">
         <img class="gran" src="Imagenes/logo gran.png" width="30%">
@@ -67,11 +80,15 @@
     </i>
     <i>
         <p class="pagina">
-            Gran Turismo (normalmente abreviado como GT) es una serie japonesa de videojuegos de simulación de carreras
+            Gran Turismo (normalmente abreviado como GT) es una serie japonesa de videojuegos de simulación de
+            carreras
             desarrollada por Polyphony Digital. Desarrollados para sistemas PlayStation, los juegos de Gran Turismo
-            están destinados a emular la apariencia y el rendimiento de una gran selección de vehículos, la mayoría de
-            los cuales son reproducciones con licencia de automóviles del mundo real. Desde el debut de la franquicia en
-            1997, se han vendido más de 90 millones de unidades en todo el mundo, lo que la convierte en la franquicia
+            están destinados a emular la apariencia y el rendimiento de una gran selección de vehículos, la mayoría
+            de
+            los cuales son reproducciones con licencia de automóviles del mundo real. Desde el debut de la
+            franquicia en
+            1997, se han vendido más de 90 millones de unidades en todo el mundo, lo que la convierte en la
+            franquicia
             de videojuegos más vendida bajo la marca PlayStation. Una adaptación cinematográfica basada en la serie
             y la carrera de Jann Mardenborough fue estrenada en agosto de 2023 y fue dirigida por Neill Blomkamp.
         </p>
@@ -80,7 +97,8 @@
     <i>
         <p class="pagina">
             La serie Gran Turismo está desarrollada por Polyphony Digital y producida por Kazunori Yamauchi. Gran
-            Turismo tiene sus orígenes en 1992, cuando Kazunori Yamauchi se propuso con un grupo de siete desarrollar el
+            Turismo tiene sus orígenes en 1992, cuando Kazunori Yamauchi se propuso con un grupo de siete
+            desarrollar el
             Gran Turismo original, que tardó cinco años en completarse.
         </p>
     </i>
@@ -89,30 +107,38 @@
             El atractivo de la serie Gran Turismo se debe significativamente a sus gráficos, una gran cantidad de
             vehículos con licencia, la atención a los detalles del vehículo, la emulación precisa de la física de
             conducción y la capacidad de ajustar el rendimiento, de ahí el subtítulo "The Real Driving Simulator",
-            incorporado a la iconografía de la franquicia desde Gran Turismo 4. El manejo de los vehículos se basa en
+            incorporado a la iconografía de la franquicia desde Gran Turismo 4. El manejo de los vehículos se basa
+            en
             impresiones de conducción de la vida real, el ajuste se basa en principios de la física y el sonido del
-            motor del vehículo se basa en grabaciones de los vehículos reales. El juego ha sido un buque insignia de las
+            motor del vehículo se basa en grabaciones de los vehículos reales. El juego ha sido un buque insignia de
+            las
             capacidades gráficas de la consola PlayStation y, a menudo, se utiliza para demostrar el potencial del
             sistema.
         </p>
     </i>
     <i>
         <p class="pagina">
-            Aunque Gran Turismo tiene un modo arcade, la mayor parte del juego se deriva de su modo de simulación. Los
+            Aunque Gran Turismo tiene un modo arcade, la mayor parte del juego se deriva de su modo de simulación.
+            Los
             jugadores comienzan con una cierta cantidad de créditos, generalmente 10,000, que se usan para comprar
-            vehículos en varias tiendas específicas del fabricante, o (más probablemente al principio) en concesionarios
+            vehículos en varias tiendas específicas del fabricante, o (más probablemente al principio) en
+            concesionarios
             de autos usados, y luego ajustan su auto en la tienda de repuestos correspondiente para obtener el mejor
             rendimiento. Ciertos eventos están abiertos solo para tipos particulares de vehículos. Para ingresar y
             progresar en carreras más difíciles, se implementó un sistema de prueba de licencias, que guía a los
-            jugadores a través del desarrollo de habilidades. Los jugadores pueden aplicar el dinero del premio ganado
-            en eventos para actualizar su automóvil existente o comprar uno nuevo, recolectando un garaje de vehículos.
+            jugadores a través del desarrollo de habilidades. Los jugadores pueden aplicar el dinero del premio
+            ganado
+            en eventos para actualizar su automóvil existente o comprar uno nuevo, recolectando un garaje de
+            vehículos.
         </p>
     </i>
     <i>
         <p class="pagina">
             Desde el lanzamiento de Gran Turismo 5 Prologue en la PS3, un aspecto en línea del juego ha comenzado a
-            evolucionar. GT5 Prologue ha permitido a los usuarios competir en línea con hasta 16 jugadores en la pista a
-            la vez. Gran Turismo 4 para PS2 fue en realidad el primer juego de Gran Turismo habilitado en línea, pero el
+            evolucionar. GT5 Prologue ha permitido a los usuarios competir en línea con hasta 16 jugadores en la
+            pista a
+            la vez. Gran Turismo 4 para PS2 fue en realidad el primer juego de Gran Turismo habilitado en línea,
+            pero el
             aspecto en línea del juego no pasó de la fase beta.
         </p>
     </i>
@@ -126,9 +152,11 @@
     </i>
     <i>
         <p class="pagina">
-            Con el lanzamiento de Gran Turismo Sport, se convirtió en el primer juego que se enfoca únicamente en las
+            Con el lanzamiento de Gran Turismo Sport, se convirtió en el primer juego que se enfoca únicamente en
+            las
             carreras en línea, mientras que el juego sin conexión es limitado. Sin embargo, Gran Turismo Sport
-            proporcionó contenido posterior al lanzamiento sin cargo, incluidos autos y pistas, junto con eventos fuera
+            proporcionó contenido posterior al lanzamiento sin cargo, incluidos autos y pistas, junto con eventos
+            fuera
             de línea, así como correcciones de errores.
         </p>
     </i>
@@ -146,27 +174,37 @@
         <p class="pagina">
             El juego más vendido en la PlayStation original, Gran Turismo, contiene 11 circuitos, 3 circuitos de
             rendimiento y múltiples eventos contrarreloj. Además tiene carreras de resistencia, 3 licencias y 172
-            coches. El modo GT no es tan vasto como en los lanzamientos posteriores, y la estructura es muy corta o sin
+            coches. El modo GT no es tan vasto como en los lanzamientos posteriores, y la estructura es muy corta o
+            sin
             forma, pero las características básicas del juego están presentes, incluyendo la habilidad de obtener
             vehículos tras ganar ciertos eventos. También se introdujo el sistema de pruebas para licencias, que
-            califica al jugador para competir en ciertos eventos. El jugador empieza con un cierto número de créditos
+            califica al jugador para competir en ciertos eventos. El jugador empieza con un cierto número de
+            créditos
             que son usados para comprar vehículos nuevos o usados de las tiendas especializadas de fabricantes (por
-            ejemplo, una vende solo Toyota, otra solo Mitsubishi, y así), o de agencias de vehículos usados, y entonces
-            puede mejorar su vehículo en la tienda de partes apropiadas para mejorar el resultado en las carreras. El
-            jugador puede gastar sus créditos obtenidos por ganar carreras en modificaciones para su automóvil actual o
-            para comprar uno nuevo. Ciertos eventos están solo abiertos para ciertos vehículos o para conductores con
+            ejemplo, una vende solo Toyota, otra solo Mitsubishi, y así), o de agencias de vehículos usados, y
+            entonces
+            puede mejorar su vehículo en la tienda de partes apropiadas para mejorar el resultado en las carreras.
+            El
+            jugador puede gastar sus créditos obtenidos por ganar carreras en modificaciones para su automóvil
+            actual o
+            para comprar uno nuevo. Ciertos eventos están solo abiertos para ciertos vehículos o para conductores
+            con
             cierta licencia. Todo esto con un equipo de 7 personas.
         </p>
     </i>
     <i>
         <p class="pagina">
-            La música de inicio de las versiones NTSC y PAL es un remix de los Chemical Brothers de la canción de Manic
+            La música de inicio de las versiones NTSC y PAL es un remix de los Chemical Brothers de la canción de
+            Manic
             Street Preachers, "Everything Must Go". La música de inicio de la versión japonesa es "Moon Over the
             Castle", compuesta por Masahiro Andoh. El juego en sí tenía una selección de canciones con licencia,
-            incluyendo "Lose Control" de Ash; "Chicken on a Bone" (instrumental reelaborado), "Shade" (instrumental),
+            incluyendo "Lose Control" de Ash; "Chicken on a Bone" (instrumental reelaborado), "Shade"
+            (instrumental),
             "Tangerine" (instrumental) y "Sweet 16" de Feeder (versión PAL); "As Heaven is Wide" de Garbage; y
-            "Oxyacetalene", "Skeletal", "Autonomy" e "Industry" de Cubanate (versiones NTSC y PAL). La versión japonesa,
-            sin embargo, utilizó una partitura completamente original. Además de "Moon Over the Castle", otras canciones
+            "Oxyacetalene", "Skeletal", "Autonomy" e "Industry" de Cubanate (versiones NTSC y PAL). La versión
+            japonesa,
+            sin embargo, utilizó una partitura completamente original. Además de "Moon Over the Castle", otras
+            canciones
             fueron remezcladas para Gran Turismo 2 y Gran Turismo 4.
         </p>
     </i>
@@ -176,10 +214,13 @@
     <i>
         <p class="pagina">
             También para la PlayStation original, Gran Turismo 2 tiene 27 circuitos, 6 licencias, 650 coches, 6
-            circuitos de rendimiento y eventos de rally. GT2 viene con dos discos: el disco de modo arcade y el disco GT
-            también conocido como Simulación, del cual la versión PAL tiene una portada de "rasca y huele" (que supone
+            circuitos de rendimiento y eventos de rally. GT2 viene con dos discos: el disco de modo arcade y el
+            disco GT
+            también conocido como Simulación, del cual la versión PAL tiene una portada de "rasca y huele" (que
+            supone
             tener olor a línea de pits), que desapareció cuando el juego se unió al nivel Platino de los juegos más
-            vendidos). La separación de los discos es consecuencia de la cantidad de mejoras al modo de simulación, se
+            vendidos). La separación de los discos es consecuencia de la cantidad de mejoras al modo de simulación,
+            se
             reorganizó el sistema de licencias y se introdujo el sistema de porcentaje de finalizado del jugador. En
             este Gran Turismo 2, la mayoría de las marcas hacen desafíos.
         </p>
@@ -189,37 +230,44 @@
     </h3>
     <i>
         <p class="pagina">
-            Inicialmente se iba a llamar Gran Turismo 2000, pero se tuvo que cambiar el nombre porque el lanzamiento del
-            juego se atrasó un año y no pudo ser en ese año. Gran Turismo 3: A-Spec fue el primero de la serie para la
+            Inicialmente se iba a llamar Gran Turismo 2000, pero se tuvo que cambiar el nombre porque el lanzamiento
+            del
+            juego se atrasó un año y no pudo ser en ese año. Gran Turismo 3: A-Spec fue el primero de la serie para
+            la
             PlayStation 2, se mejoraron notoriamente los gráficos y el sistema de juego.
         </p>
     </i>
     <i>
         <p class="pagina">
             Una nueva característica fueron los cambios de aceite. Según la distancia recorrida, el rendimiento del
-            motor disminuía gradualmente hasta que una luz en el velocímetro anunciaba que se necesitaba un cambio de
+            motor disminuía gradualmente hasta que una luz en el velocímetro anunciaba que se necesitaba un cambio
+            de
             aceite.
         </p>
     </i>
     <i>
         <p class="pagina">
             El modo Gran Turismo, tuvo una interfaz reorganizada, con una mayor estructura y ordenamiento de las
-            carreras y retos. En adición, las tiendas de vehículos fueron organizadas por país y luego por fabricante,
-            que era más intuitivo que el método usado en GT2. GT3 contó con menos vehículos (cerca de 150), debido en
+            carreras y retos. En adición, las tiendas de vehículos fueron organizadas por país y luego por
+            fabricante,
+            que era más intuitivo que el método usado en GT2. GT3 contó con menos vehículos (cerca de 150), debido
+            en
             mayor parte por el trabajo que se requirió para mejorar los gráficos y estadísticas de los vehículos.
         </p>
     </i>
     <i>
         <p class="pagina">
             El lanzamiento inicial en Japón del GT3 incluía un manual de 179 páginas llamado "Gran Turismo 3 A-Spec
-            Reference Guide", que incluía guías detalladas en técnicas de manejo para el volante GT Force de Logitech,
+            Reference Guide", que incluía guías detalladas en técnicas de manejo para el volante GT Force de
+            Logitech,
             un catálogo completo de partes para modificar y una descripción de todos los automóviles que incluía el
             juego. En lanzamientos posteriores se eliminó este manual.
         </p>
     </i>
     <i>
         <p class="pagina">
-            El tema principal de este juego para la versión NTSC se llama Are You Gonna Go My Way de Lenny Kravitz, pero
+            El tema principal de este juego para la versión NTSC se llama Are You Gonna Go My Way de Lenny Kravitz,
+            pero
             este tuvo un remix especial para este juego.
         </p>
     </i>
@@ -234,41 +282,57 @@
     </h3>
     <i>
         <p class="pagina">
-            Fue comercializado el 7 de septiembre de 2004 en Japón y Hong Kong (NTSC-J), 20 de octubre de 2004 en los
-            Estados Unidos (NTSC-U/C) y el 9 de marzo de 2005 en Europa (PAL). Después de haber retrasado su lanzamiento
+            Fue comercializado el 7 de septiembre de 2004 en Japón y Hong Kong (NTSC-J), 20 de octubre de 2004 en
+            los
+            Estados Unidos (NTSC-U/C) y el 9 de marzo de 2005 en Europa (PAL). Después de haber retrasado su
+            lanzamiento
             un año y medio y haber quitado su modo en línea, Gran Turismo 4 fue uno de los juegos más esperados del
-            2005, y vendió un millón de copias en su primera semana de ventas en Japón. Contiene 721 automóviles (en la
-            versión PAL) de 80 fabricantes, desde el Daimler Motor Carriage 1886 hasta conceptos del año 2022, pasando
-            por el Nissan 350Z Gran Turismo Edition, una colaboración entre Nissan y Polyphony Digital. También contiene
+            2005, y vendió un millón de copias en su primera semana de ventas en Japón. Contiene 721 automóviles (en
+            la
+            versión PAL) de 80 fabricantes, desde el Daimler Motor Carriage 1886 hasta conceptos del año 2022,
+            pasando
+            por el Nissan 350Z Gran Turismo Edition, una colaboración entre Nissan y Polyphony Digital. También
+            contiene
             51 circuitos, muchos son variantes de las originales de Gran Turismo. Algunos circuitos importantes son
-            Nordschleife, una variante de Nürburgring, Suzuka, el circuito de la Sarthe, circuitos modelados en lugares
+            Nordschleife, una variante de Nürburgring, Suzuka, el circuito de la Sarthe, circuitos modelados en
+            lugares
             como el Times Square de Nueva York, Hong Kong, París y Las Vegas.
         </p>
     </i>
     <i>
         <p class="pagina">
-            Hay 720 vehículos en el juego (aunque debe decirse que la lista incluye vehículos con múltiples variaciones,
-            como 20 Subaru Impreza, 25 Mitsubishi Lancer y 48 Nissan Skyline) y más de 50 circuitos. Entre las nuevas
-            características están la posibilidad de instalar alerones para incrementar el empuje vertical (hay que notar
-            que esto difiere de la opción "racing modification" que se presentaba en los anteriores Gran Turismo y que
-            básicamente convertía el vehículo en un modelo de carreras), la posibilidad para los vehículos modificados o
-            de carreras de escupir llamas por los escapes, y la inclusión controvertida de óxido nitroso (N2O). También
+            Hay 720 vehículos en el juego (aunque debe decirse que la lista incluye vehículos con múltiples
+            variaciones,
+            como 20 Subaru Impreza, 25 Mitsubishi Lancer y 48 Nissan Skyline) y más de 50 circuitos. Entre las
+            nuevas
+            características están la posibilidad de instalar alerones para incrementar el empuje vertical (hay que
+            notar
+            que esto difiere de la opción "racing modification" que se presentaba en los anteriores Gran Turismo y
+            que
+            básicamente convertía el vehículo en un modelo de carreras), la posibilidad para los vehículos
+            modificados o
+            de carreras de escupir llamas por los escapes, y la inclusión controvertida de óxido nitroso (N2O).
+            También
             se incluyó el modo fotografía (Photo Mode) y el modo B-Spec.
         </p>
     </i>
     <i>
         <p class="pagina">
-            En adición, la física y la inteligencia artificial (IA) han sido completamente retrabajados. La IA de los
-            vehículos oponentes puede ser configurada por el jugador con más de 10 ajustes en el modo arcade, pero aún
+            En adición, la física y la inteligencia artificial (IA) han sido completamente retrabajados. La IA de
+            los
+            vehículos oponentes puede ser configurada por el jugador con más de 10 ajustes en el modo arcade, pero
+            aún
             palidece en comparación de lo mostrado en otros juegos de carreras. GT4 es también el primer juego de la
-            serie en mostrar pilotos, lo que permite conducir los vehículos convertibles con la capota recogida, y la
+            serie en mostrar pilotos, lo que permite conducir los vehículos convertibles con la capota recogida, y
+            la
             inclusión de vehículos antiguos como el Daimler-Benz Motor Wagen y el Ford Modelo T, aunque no puede ser
             utilizados en competición, solo para pruebas contrarreloj.
         </p>
     </i>
     <i>
         <p class="pagina">
-            También fueron incluidas por primera vez en la serie, camionetas "pickup", como la Ford F150 SVT Lightning y
+            También fueron incluidas por primera vez en la serie, camionetas "pickup", como la Ford F150 SVT
+            Lightning y
             la Dodge Ram, y de los nuevos modelos están el Buick GNX 1987 y las dos versiones del Pontiac GTO, la de
             1964 y la de 2004. El primer carro personalizado de la serie también fue incluido, el Buick Special.
         </p>
@@ -276,14 +340,17 @@
     <i>
         <p class="pagina">
             La mejora más significante sobre los lanzamientos anteriores, por mucho, fue el nuevo desarrollo de la
-            física. Los jugadores deben aprender aún más sobre las carreras reales para poder manejar de forma efectiva
-            en el juego en comparación con otros juegos de carreras. Los controles de tracción y estabilidad permanecen
+            física. Los jugadores deben aprender aún más sobre las carreras reales para poder manejar de forma
+            efectiva
+            en el juego en comparación con otros juegos de carreras. Los controles de tracción y estabilidad
+            permanecen
             disponibles para proporcionar ayuda de manejo realista para principiantes.
         </p>
     </i>
     <i>
         <p class="pagina">
-            Las pruebas para conseguir una licencia han sido una parte integral de los juegos de la serie. Al completar
+            Las pruebas para conseguir una licencia han sido una parte integral de los juegos de la serie. Al
+            completar
             niveles más altos de prueba, permitirá al jugador obtener carreras más difíciles, donde la victoria se
             traduce en más créditos y vehículos más rápidos y exclusivos. Esto a su vez le dará al jugador una mejor
             oportunidad de ganar más carreras.
@@ -291,14 +358,19 @@
     </i>
     <i>
         <p class="pagina">
-            El jugador avanzado debe ser capaz de juzgar su capacidad por los realistas tiempos de vuelta. De acuerdo
+            El jugador avanzado debe ser capaz de juzgar su capacidad por los realistas tiempos de vuelta. De
+            acuerdo
             con los desarrolladores, fue invitado un conductor profesional para marcar los tiempos usando él mismo
-            vehículos en el circuito de Nürburgring Nordschleife, y los tiempos de vuelta de GT4 estuvieron dentro del
+            vehículos en el circuito de Nürburgring Nordschleife, y los tiempos de vuelta de GT4 estuvieron dentro
+            del
             2% del tiempo real. Sin embargo, Jeremy Clarkson del programa de televisión británico Top Gear, trató de
-            mejorar su tiempo en Laguna Seca en un Honda NSX, y no tardó tanto. Su tiempo en la vida real de 1:57 era
-            mucho mayor al tiempo virtual de 1:41.148. Clarkson, de hecho, usó un Honda NSX-R en el juego pero condujo
+            mejorar su tiempo en Laguna Seca en un Honda NSX, y no tardó tanto. Su tiempo en la vida real de 1:57
+            era
+            mucho mayor al tiempo virtual de 1:41.148. Clarkson, de hecho, usó un Honda NSX-R en el juego pero
+            condujo
             un Acura NSX en Laguna Seca; el NSX-R es una versión más ligera y rápida del original NSX. Aun así, la
-            comparación del Clarkson virtual y el real falló. Él mencionó que en el juego pudo tomar mayores riesgos que
+            comparación del Clarkson virtual y el real falló. Él mencionó que en el juego pudo tomar mayores riesgos
+            que
             en la vida real.
         </p>
     </i>
@@ -307,38 +379,54 @@
     </h3>
     <i>
         <p class="pagina">
-            A la venta desde el 24 de noviembre de 2010 para la PlayStation 3, los gráficos del videojuego mejorados,
-            gracias a la resolución nativa de 1080p y a los 60fps constantes logra una mejora visual. Incluye carreras
-            en línea para un máximo de 16 jugadores en línea. Los vehículos se dividen entre 2 categorías, los vehículos
-            "Premium" (200 ejemplares), que son vehículos cuyo interior está completamente detallado, y los vehículos
+            A la venta desde el 24 de noviembre de 2010 para la PlayStation 3, los gráficos del videojuego
+            mejorados,
+            gracias a la resolución nativa de 1080p y a los 60fps constantes logra una mejora visual. Incluye
+            carreras
+            en línea para un máximo de 16 jugadores en línea. Los vehículos se dividen entre 2 categorías, los
+            vehículos
+            "Premium" (200 ejemplares), que son vehículos cuyo interior está completamente detallado, y los
+            vehículos
             "Estándar" (800 ejemplares) los cuales no tienen un interior detallado y mayormente se consiguen en el
-            garaje de segunda mano, aparte de que ahora hay una opción para que los daños que sufran los vehículos sean
-            o cosméticos, o realistas, cosa que no pasaba en los otros Gran Turismo. Vehículos Ferrari y Fórmula 1, se
-            incluyen carreras de Rally, NASCAR, cambio dinámico de clima durante las carreras y velocímetros detallados
-            de los vehículos para la vista interior (solo Premium). También tiene modo limpiaparabrisas, claxon y luces
-            que permitirán a los vehículos (según el circuito) ver por la noche, pero solo para los vehículos Premium,
-            los Estándar tienen luces pero no cambian entre bajas o largas, además, los vehículos de calle (normales)
+            garaje de segunda mano, aparte de que ahora hay una opción para que los daños que sufran los vehículos
+            sean
+            o cosméticos, o realistas, cosa que no pasaba en los otros Gran Turismo. Vehículos Ferrari y Fórmula 1,
+            se
+            incluyen carreras de Rally, NASCAR, cambio dinámico de clima durante las carreras y velocímetros
+            detallados
+            de los vehículos para la vista interior (solo Premium). También tiene modo limpiaparabrisas, claxon y
+            luces
+            que permitirán a los vehículos (según el circuito) ver por la noche, pero solo para los vehículos
+            Premium,
+            los Estándar tienen luces pero no cambian entre bajas o largas, además, los vehículos de calle
+            (normales)
             tienen claxon, mientras que los de competición, rally, entre otros, no tienen.
         </p>
     </i>
     <i>
         <p class="pagina">
             Otra adición importante respecto a las versiones anteriores de GT, es el incremento de los competidores
-            Inteligencia Artificial (controlados por la computadora), bastante más competitivos (cuando se compite con
-            vehículos sin modificar), y la cantidad de ellos: 12 o 16 según circuito, que, comparado con los 5 de antes,
+            Inteligencia Artificial (controlados por la computadora), bastante más competitivos (cuando se compite
+            con
+            vehículos sin modificar), y la cantidad de ellos: 12 o 16 según circuito, que, comparado con los 5 de
+            antes,
             es una mejora notable.
         </p>
     </i>
     <i>
         <p class="pagina">
-            En el E3 2010 confirman su lanzamiento para el 2 de noviembre de 2010 en Japón y en EE. UU. y Europa el 3 de
-            noviembre de 2010. Tres semanas antes de dicha fecha, se aplaza por última vez al 24 de noviembre de 2010.
+            En el E3 2010 confirman su lanzamiento para el 2 de noviembre de 2010 en Japón y en EE. UU. y Europa el
+            3 de
+            noviembre de 2010. Tres semanas antes de dicha fecha, se aplaza por última vez al 24 de noviembre de
+            2010.
         </p>
     </i>
     <i>
         <p class="pagina">
-            El lanzamiento del GT5 supone una nueva era tecnológica en la actual generación de juegos de simulación de
-            autos. Este incluye (como lo hacía en GT4) vehículos de Fórmula 1, además de incluir a Ferrari, Lamborghini,
+            El lanzamiento del GT5 supone una nueva era tecnológica en la actual generación de juegos de simulación
+            de
+            autos. Este incluye (como lo hacía en GT4) vehículos de Fórmula 1, además de incluir a Ferrari,
+            Lamborghini,
             Bugatti por primera vez y algunas otras marcas nuevas.
         </p>
     </i>
@@ -361,19 +449,29 @@
     </h3>
     <i>
         <p class="pagina">
-            Lanzado el 6 de diciembre de 2013 para la PlayStation 3. Contiene resolución nativa de 1080p y a los 60fps.
-            Al igual que su predecesor, los vehículos se dañan con los golpes y arañazos, ahora presenta 400 vehículos
-            Premium y 800 vehículos Estándar, además de tener 117 circuitos y con ayuda de una aplicación llamada Track
-            Path Editor, se pueden editar circuitos personalizados. El juego incluye un tributo a Ayrton Senna, el cual
+            Lanzado el 6 de diciembre de 2013 para la PlayStation 3. Contiene resolución nativa de 1080p y a los
+            60fps.
+            Al igual que su predecesor, los vehículos se dañan con los golpes y arañazos, ahora presenta 400
+            vehículos
+            Premium y 800 vehículos Estándar, además de tener 117 circuitos y con ayuda de una aplicación llamada
+            Track
+            Path Editor, se pueden editar circuitos personalizados. El juego incluye un tributo a Ayrton Senna, el
+            cual
             es un homenaje y se hace seguimiento a la trayectoria de su carrera. Cuenta con varios modos de carrera,
             como conducir en la Luna con el rover lunar, y carreras sucesivas con los nuevos modelos de Red Bull.
-            Aumenta el número de oponentes a 16, y es notable el aumento de la IA del juego, y con una actualización, es
-            posible jugar con el modo B-spec, ya que los eventos ya no se dividen en modo A-spec y B-spec. Una de las
-            características de este juego son los nuevos vehículos prototipo llamados "Vision Gran Turismo", y en cada
-            actualización del juego se encuentran nuevos vehículos verdaderamente sorprendentes. Por primera vez en la
+            Aumenta el número de oponentes a 16, y es notable el aumento de la IA del juego, y con una
+            actualización, es
+            posible jugar con el modo B-spec, ya que los eventos ya no se dividen en modo A-spec y B-spec. Una de
+            las
+            características de este juego son los nuevos vehículos prototipo llamados "Vision Gran Turismo", y en
+            cada
+            actualización del juego se encuentran nuevos vehículos verdaderamente sorprendentes. Por primera vez en
+            la
             saga, es posible modificar el interior de los vehículos y aumentar el tamaño de los rines, aunque solo
-            aplica para vehículos "Premium", además de que se puede personalizar el traje y casco del piloto. El juego
-            recibió críticas muy favorables con respecto a su antecesor, y la aclamación de pilotos famosos y críticos y
+            aplica para vehículos "Premium", además de que se puede personalizar el traje y casco del piloto. El
+            juego
+            recibió críticas muy favorables con respecto a su antecesor, y la aclamación de pilotos famosos y
+            críticos y
             aficionados al automovilismo, así como la inclusión de vehículos modificados por coleccionistas.
         </p>
     </i>
@@ -382,8 +480,10 @@
     </h3>
     <i>
         <p class="pagina">
-            Es el próximo videojuego de carreras y simulación, y la séptima entrega de la serie Gran Turismo, que saldrá
-            en exclusiva para PlayStation 5 y PlayStation 4, Según Kazunori, creador de la franquicia, será la mezcla
+            Es el próximo videojuego de carreras y simulación, y la séptima entrega de la serie Gran Turismo, que
+            saldrá
+            en exclusiva para PlayStation 5 y PlayStation 4, Según Kazunori, creador de la franquicia, será la
+            mezcla
             del pasado, presente y futuro de las carreras de coches.
         </p>
     </i>
@@ -393,8 +493,10 @@
     </h3>
     <i>
         <p class="pagina">
-            La serie Gran Turismo está representada por ocho lanzamientos principales, dos para PlayStation, dos para
-            PlayStation 2, dos para PlayStation 3, dos para PlayStation 4 y uno para PlayStation 5. La serie es también
+            La serie Gran Turismo está representada por ocho lanzamientos principales, dos para PlayStation, dos
+            para
+            PlayStation 2, dos para PlayStation 3, dos para PlayStation 4 y uno para PlayStation 5. La serie es
+            también
             representado por muchos otros lanzamientos "abreviados" en la PS2, PSP y PS3.
         </p>
     </i>
@@ -549,40 +651,103 @@
         </div>
     </section>
     <div class="container" id="dotted">
-        <h2>Preguntas</h2>
+        <p>1. ¿Cuál es el primer videojuego de Gran Turismo y en qué año se lanzó?</p>
         <form>
-            <label for="fname">1. ¿Cuál fue el nombre del primer juego de la serie Gran Turismo y en qué año se
-                lanzó?</label>
-            <input type="text" id="fname" name="fname" placeholder="Respuesta" required>
-            <label for="lname">2. ¿Quién es el creador y productor principal de la serie Gran Turismo?</label>
-            <input type="text" id="lname" name="lname" placeholder="Respuesta" required>
-            <label for="lname">3. ¿En qué entrega de Gran Turismo se incluyeron por primera vez vehículos con estilo
-                Fórmula 1?</label>
-            <input type="text" id="lname" name="lname" placeholder="Respuesta" required>
-            <p>4. ¿Qué juego de Gran Turismo es el primero y único en incluir el Benz Patent Motorwagen de 1886, el
-                primer automóvil del mundo?</p>
-            <label><input type="radio" name="color" id="incorrecto"> Gran Turismo 1
-            </label><br>
-            <label><input type="radio" name="color" id="correcto"> Gran Turismo 4
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto"> Gran Turismo 7
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto"> Ninguna es correcta
-            </label>
-            <p>5. ¿Cuántas copias ha vendido la franquicia Gran Turismo en total hasta junio de 2025?</p>
-            <label><input type="radio" name="color" id="incorrecto">Menos de 100 millones de copias
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Más de 100 millones de copias
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Más 50 mil copias
-                Speed
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Menos de 50 mil copias
-            </label>
-            <br>
-            <input type="submit" value="Submit">
+            <label><input type="radio" name="color" data-correct="false"> Gran Turismo 2 1999</label><br>
+            <label><input type="radio" name="color" data-correct="true"> Gran Turismo 1997</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Gran Turismo 4 2004</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Gran Turismo 5 2010</label>
+        </form>
+        <p>2. ¿Cuántos coches tiene Gran Turismo 7 en total?</p>
+        <form>
+            <label><input type="radio" name="color" data-correct="false"> Más de 100 coches</label><br>
+            <label><input type="radio" name="color" data-correct="true"> Más de 500 coches</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Menos de 500 coches</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Ninguna es correcta</label>
+        </form>
+        <p>3. ¿Qué juego de Gran Turismo introdujo por primera vez el modo GT Café?</p>
+        <form>
+            <label><input type="radio" name="color" data-correct="false"> Gran Turismo Sport</label><br>
+            <label><input type="radio" name="color" data-correct="true"> Gran Turismo 7</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Gran Turismo 6</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Ninguna es correcta</label>
+        </form>
+        <p>4. ¿Qué juego de Gran Turismo es el primero y único en incluir el Benz Patent Motorwagen de 1886, el
+            primer
+            automóvil del mundo?</p>
+        <form>
+            <label><input type="radio" name="color" data-correct="false"> Gran Turismo 1</label><br>
+            <label><input type="radio" name="color" data-correct="true"> Gran Turismo 4</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Gran Turismo 7</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Ninguna es correcta</label>
+        </form>
+        <p>5. ¿Cuántas copias ha vendido la franquicia Gran Turismo en total hasta junio de 2025?</p>
+        <form>
+            <label><input type="radio" name="color" data-correct="false"> Menos de 100 millones de
+                copias</label><br>
+            <label><input type="radio" name="color" data-correct="true"> Más de 100 millones de copias</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Más 50 mil copias</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Menos de 50 mil copias</label>
         </form>
     </div><br>
+    <!-- === MI OPINIÓN PERSONAL Y VÍDEOS DE GRAN TURISMO (VIDEOJUEGO) === -->
+    <div style="margin: 80px 0; text-align: center;">
+        <h2 style="color: #ff6b00; margin-bottom: 30px; font-size: 2em;">
+            Mi opinión personal sobre Gran Turismo 🎮🏆
+        </h2>
+
+        <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.3em; line-height: 1.7; color: #eee;">
+            Gran Turismo es EL simulador definitivo. Polyphony Digital creó el género de simracing.<br>
+            Lo que me fascina: física realista, 1000+ coches licenciados y circuitos perfectos (Nürburgring
+            pixel-perfect).<br><br>
+            GT7 (2022) es mi favorito actual con PSVR2, pero GT4 en PSP fue revolucionario. En 2025, con GT8
+            rumores,
+            ¡no puedo esperar!<br>
+            Es adictivo: empiezas con un Civic y terminas en Le Mans Hypercars.
+        </p>
+
+        <!-- Evolución de la saga -->
+        <div style="max-width: 900px; margin: 0 auto 50px;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px; font-size: 1.6em;">
+                Evolución de Gran Turismo (desde GT1 hasta GT7)
+            </h3>
+            <iframe width="100%" height="500" src="https://www.yout-ube.com/watch?v=CfOfKJ4scjk"
+                title="Gran Turismo evolution" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p style="margin-top: 15px; font-style: italic; color: #aaa;">
+                25 años de perfección... ¡qué viaje!
+            </p>
+        </div>
+
+        <!-- Gameplay GT7 -->
+        <div style="max-width: 900px; margin: 0 auto 50px;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px; font-size: 1.6em;">
+                GT7 - Nürburgring en 4K
+            </h3>
+            <iframe width="100%" height="500" src="https://www.yout-ube.com/watch?v=2IU6oOLQvGI"
+                title="Gran Turismo 7 Nurburgring" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p style="margin-top: 15px; font-style: italic; color: #aaa;">
+                Física brutal, sonido real... simracing puro
+            </p>
+        </div>
+
+        <!-- Mi top de juegos GT -->
+        <div style="background: #222; padding: 30px; border-radius: 15px; max-width: 700px; margin: 0 auto;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px;">Mi Top 5 juegos Gran Turismo</h3>
+            <ol style="text-align: left; font-size: 1.2em; line-height: 1.8; margin-left: 40px;">
+                <li><strong>GT4 (PS2)</strong> → El más completo</li>
+                <li><strong>GT7 (PS5)</strong> → Gráficos y VR</li>
+                <li><strong>GT Sport (PS4)</strong> → Online rey</li>
+                <li><strong>GT5 (PS3)</strong> → 3D y daños</li>
+                <li><strong>GT2 (PS1)</strong> → Donde empezó todo</li>
+            </ol>
+        </div>
+    </div>
     <!--Esto es un codigo de un gif-->
     <div style="text-align: center;"><img src="/Imagenes/gran.gif" alt="Un gtr"></div>
     <ol class="pagination">
@@ -592,6 +757,8 @@
         <li><a href="Prueba 9.html">3</a></li>
         <li><a href="Prueba 9.html">&raquo;</a></li>
     </ol>
+    <div id="progressBar"></div>
     <script src="session.js"></script>
     <script src="quiz.js"></script>
+    <script src="scroll.js"></script>
 </body>

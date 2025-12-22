@@ -4,14 +4,25 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina wed sobre coches</title>
+    <title>JDM World - F1 Juego</title>
     <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/z-icon">
     <link rel="stylesheet" href="Style.css">
+    <!-- SEO avanzado 2025 -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tu nick o nombre">
+
+    <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
+    <meta property="og:title" content="JDM World - Nissan GT-R R34">
+    <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
+    <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
+    <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
+    <meta property="og:type" content="article">
 </head>
 
 <body class="f1">
     <nav class="barra">
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
                 <a class="dropbtn">Peliculas</a>
@@ -44,19 +55,21 @@
                 <div class="dropdown-content">
                     <a href="Prueba 13.html">Iniciar Sesión</a>
                     <a href="Prueba 14.html">Registrarse</a>
-                    <a href="Prueba 15.html">Usuario</a>
                 </div>
             </li>
-            <div class="audio-player">
-                <audio id="background-audio" loop>
-                    <source src="/Audios/bandoleros.ogg" type="audio/ogg">
-                    Tu navegador no soporta audio.
-                </audio>
-                <button id="audio-toggle" class="audio-btn">
-                    🔊 Música ON
-                </button>
-            </div>
+            <li><a href="Prueba 15.html">Usuario</a></li>
         </ul>
+        <div class="audio-player">
+            <audio id="background-audio" loop>
+                <source src="/Audios/bandoleros.ogg" type="audio/ogg">
+                Tu navegador no soporta audio.
+            </audio>
+            <button id="audio-toggle" class="audio-btn">
+                🔊 Música ON
+            </button>
+            <button id="darkModeToggle"
+                style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
+        </div>
     </nav>
     <header class="f1">
         <img class="f1" src="Imagenes/logo f1.png" width="30%">
@@ -256,41 +269,98 @@
         </div>
     </section>
     <div class="container" id="dotted">
-        <h2>Preguntas</h2>
+        <p>1. ¿Cuál es el primer videojuego de F1 de Codemasters y en qué año se lanzó?</p>
         <form>
-            <label for="fname">1. ¿Cuál fue el nombre del primer juego de la serie F1 de Codemasters y en qué año se
-                lanzó?</label>
-            <input type="text" id="fname" name="fname" placeholder="Respuesta" required>
-            <label for="lname">2. ¿Qué estudio de desarrollo es el principal responsable de la serie F1 anual desde
-                2009?</label>
-            <input type="text" id="lname" name="lname" placeholder="Respuesta" required>
-            <label for="lname">3. ¿En qué entrega de F1 se incluyeron por primera vez vehículos clásicos de Fórmula
-                1?</label>
-            <input type="text" id="lname" name="lname" placeholder="Respuesta" required>
-            <p>4. ¿Qué juego de F1 introdujo por primera vez el modo historia "Braking Point"?</p>
-            <label><input type="radio" name="color" id="incorrecto"> F1 2022
-            </label><br>
-            <label><input type="radio" name="color" id="correcto"> F1 2023
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">F1 2021
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto"> Ninguna es correcta
-            </label>
-            <p>5. ¿Qué juego de F1, lanzado en 2025, incluye integración con la película "F1" y circuitos invertidos?
-            </p>
-            <label><input type="radio" name="color" id="incorrecto">F1 25
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">F1 2026
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">F1 2023
-                Speed
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">F1 2020
-            </label>
-            <br>
-            <input type="submit" value="Submit">
+            <label><input type="radio" name="color" data-correct="false"> F1 2011</label><br>
+            <label><input type="radio" name="color" data-correct="true"> F1 2010</label><br>
+            <label><input type="radio" name="color" data-correct="false"> F1 2012</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Ninguna es correcta</label>
+        </form>
+        <p>2. ¿Cuántos pilotos oficiales tiene F1 2024?</p>
+        <form>
+            <label><input type="radio" name="color" data-correct="false"> 18</label><br>
+            <label><input type="radio" name="color" data-correct="true"> 20</label><br>
+            <label><input type="radio" name="color" data-correct="false"> 22</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Ninguna es correcta</label>
+        </form>
+        <p>3. ¿Qué juego de F1 introdujo por primera vez el modo My Team?</p>
+        <form>
+            <label><input type="radio" name="color" data-correct="false"> F1 2021</label><br>
+            <label><input type="radio" name="color" data-correct="true"> F1 2020</label><br>
+            <label><input type="radio" name="color" data-correct="false"> F1 2022</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Ninguna es correcta</label>
+        </form>
+        <p>4. ¿Qué juego de F1 introdujo por primera vez el modo historia "Braking Point"?</p>
+        <form>
+            <label><input type="radio" name="color" data-correct="false"> F1 2022</label><br>
+            <label><input type="radio" name="color" data-correct="true"> F1 2021</label><br>
+            <label><input type="radio" name="color" data-correct="false"> F1 2023</label><br>
+            <label><input type="radio" name="color" data-correct="false"> Ninguna es correcta</label>
+        </form>
+        <p>5. ¿Qué juego de F1, lanzado en 2025, incluye integración con la película "F1" y circuitos invertidos?</p>
+        <form>
+            <label><input type="radio" name="color" data-correct="true"> F1 2025</label><br>
+            <label><input type="radio" name="color" data-correct="false"> F1 2026</label><br>
+            <label><input type="radio" name="color" data-correct="false"> F1 2023</label><br>
+            <label><input type="radio" name="color" data-correct="false"> F1 2020</label>
         </form>
     </div><br>
+    <!-- === MI OPINIÓN PERSONAL Y VÍDEOS DE F1 (VIDEOJUEGO) === -->
+    <div style="margin: 80px 0; text-align: center;">
+        <h2 style="color: #ff6b00; margin-bottom: 30px; font-size: 2em;">
+            Mi opinión personal sobre F1 (videojuegos) 🏎️⚡
+        </h2>
+
+        <p style="max-width: 800px; margin: 0 auto 40px; font-size: 1.3em; line-height: 1.7; color: #eee;">
+            Los juegos de F1 de Codemasters/EA son el sim definitivo de monoplazas. Desde F1 2010 cambiaron el
+            juego.<br>
+            Mi vicio: My Team, Braking Point (historia genial) y circuitos reales con clima dinámico.<br><br>
+            F1 25 (2025) con IA mejorada y circuitos invertidos es el pico actual. Juegas una temporada y sientes la
+            presión real de Hamilton o Verstappen.
+        </p>
+
+        <!-- Tráiler F1 25 -->
+        <div style="max-width: 900px; margin: 0 auto 50px;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px; font-size: 1.6em;">
+                F1 25 - Tráiler oficial (2025)
+            </h3>
+            <iframe width="100%" height="500" src="https://www.yout-ube.com/watch?v=gBS3xgF93qo" title="F1 25 trailer"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p style="margin-top: 15px; font-style: italic; color: #aaa;">
+                Integración con la película F1... ¡histórico!
+            </p>
+        </div>
+
+        <!-- Gameplay Monza -->
+        <div style="max-width: 900px; margin: 0 auto 50px;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px; font-size: 1.6em;">
+                Monza en F1 24 - 300km/h
+            </h3>
+            <iframe width="100%" height="500" src="https://www.yout-ube.com/watch?v=NyLHgXyU4Iw"
+                title="F1 Monza gameplay" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+            <p style="margin-top: 15px; font-style: italic; color: #aaa;">
+                Parabolica a fondo... ¡sensación real!
+            </p>
+        </div>
+
+        <!-- Mi top de características -->
+        <div style="background: #222; padding: 30px; border-radius: 15px; max-width: 700px; margin: 0 auto;">
+            <h3 style="color: #ff8b33; margin-bottom: 20px;">Mi Top 5 características F1</h3>
+            <ol style="text-align: left; font-size: 1.2em; line-height: 1.8; margin-left: 40px;">
+                <li><strong>Braking Point 2</strong> → Historia adictiva</li>
+                <li><strong>My Team</strong> → Tu equipo propio</li>
+                <li><strong>Clima dinámico</strong> → Lluvia caótica</li>
+                <li><strong>Circuitos reales</strong> → Pixel-perfect</li>
+                <li><strong>F1 25 updates</strong> → Circuitos invertidos</li>
+            </ol>
+        </div>
+    </div>
     <!--Esto es un codigo de un gif-->
     <div style="text-align: center;"><img src="/Imagenes/f1 juego.gif" alt="Un gtr" width="25%"></div>
     <ol class="pagination">
@@ -300,8 +370,10 @@
         <li><a class="active" href="Prueba 9.html">3</a></li>
         <li><a class="disabled" href="Prueba 9.html">&raquo;</a></li>
     </ol>
+    <div id="progressBar"></div>
     <script src="session.js"></script>
     <script src="quiz.js"></script>
+    <script src="scroll.js"></script>
 </body>
 
 </html>

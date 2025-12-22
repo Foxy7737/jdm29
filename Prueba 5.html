@@ -4,14 +4,25 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pagina wed sobre coches</title>
+    <title>JDM World - Gran Turismo</title>
     <link rel="icon" href="Iconos/carro-deportivo.ico" type="image/z-icon">
     <link rel="stylesheet" href="Style.css">
+    <!-- SEO avanzado 2025 -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Tu nick o nombre">
+
+    <!-- Open Graph (para compartir en redes: WhatsApp, X, Facebook) -->
+    <meta property="og:title" content="JDM World - Nissan GT-R R34">
+    <meta property="og:description" content="El rey de los JDM: specs, drift y mods del R34.">
+    <meta property="og:image" content="https://tuweb.com/Imagenes/gtr-preview.jpg"> <!-- Imagen 1200x630 px -->
+    <meta property="og:url" content="https://tuweb.com/Prueba 10.html">
+    <meta property="og:type" content="article">
 </head>
 
 <body class="gran">
     <nav class="barra">
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+        <ul id="menu">
             <li><a href="index.html">Inicio</a></li>
             <li class="dropdown">
                 <a class="dropbtn">Peliculas</a>
@@ -44,9 +55,9 @@
                 <div class="dropdown-content">
                     <a href="Prueba 13.html">Iniciar Sesión</a>
                     <a href="Prueba 14.html">Registrarse</a>
-                    <a href="Prueba 15.html">Usuario</a>
                 </div>
             </li>
+            <li><a href="Prueba 15.html">Usuario</a></li>
         </ul>
         <div class="audio-player">
             <audio id="background-audio" loop>
@@ -56,6 +67,8 @@
             <button id="audio-toggle" class="audio-btn">
                 🔊 Música ON
             </button>
+            <button id="darkModeToggle"
+                style="background: none; border: none; color: #ff6b00; font-size: 1.2em; cursor: pointer;">🌙</button>
         </div>
     </nav>
     <header class="gran">
@@ -422,6 +435,57 @@
     </i>
     <div style="text-align: center;"><a href="https://es.wikipedia.org/wiki/Gran_Turismo_(pel%C3%ADcula)"
             target="_blank" class="button button3">Wikipedia</a></div><br>
+    <section class="opinion-visual">
+        <div class="opinion-texto">
+            <h2>De gamer a piloto real</h2>
+            <p>
+                Es una historia real que inspira: Jann Mardenborough pasa de jugar GT en su habitación a correr en Le
+                Mans. ¡Es el sueño de cualquier simracer!<br><br>
+                La película muestra lo serio que es el simracing: GT Academy existió y cambió vidas.
+            </p>
+        </div>
+        <div class="opinion-imagen">
+            <img src="Imagenes/gran 2.jpg" alt="Nissan GT-R JDM">
+        </div>
+    </section>
+    <div class="container" id="dotted">
+        <h2>Preguntas sobre Gran Turismo</h2>
+        <p>1. ¿Cuál es el nombre del protagonista de la película?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q1" data-correct="false">Danny Moore</label><br>
+            <label><input type="radio" name="q1" data-correct="true">Jann Mardenborough</label><br>
+            <label><input type="radio" name="q1" data-correct="false">Jack Salter</label><br>
+            <label><input type="radio" name="q1" data-correct="false">Matty Davis</label>
+        </form>
+        <p>2. ¿En qué año se basa la historia de la película?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q2" data-correct="false">2010</label><br>
+            <label><input type="radio" name="q2" data-correct="true">2011</label><br>
+            <label><input type="radio" name="q2" data-correct="false">2015</label><br>
+            <label><input type="radio" name="q2" data-correct="false">2020</label>
+        </form>
+        <p>3. ¿Qué equipo de carreras representa Jann en la película?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q3" data-correct="false">Ferrari</label><br>
+            <label><input type="radio" name="q3" data-correct="true">Nissan</label><br>
+            <label><input type="radio" name="q3" data-correct="false">Mercedes</label><br>
+            <label><input type="radio" name="q3" data-correct="false">Red Bull</label>
+        </form>
+        <p>4. ¿Quién es el mentor de Jann en la película?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q4" data-correct="false">Danny Moore</label><br>
+            <label><input type="radio" name="q4" data-correct="true">Jack Salter</label><br>
+            <label><input type="radio" name="q4" data-correct="false">Matty Davis</label><br>
+            <label><input type="radio" name="q4" data-correct="false">Nicholas Capa</label>
+        </form>
+        <p>5. ¿En qué videojuego se basa la historia de la película?</p>
+        <form class="quiz-form">
+            <label><input type="radio" name="q5" data-correct="false">Need for Speed</label><br>
+            <label><input type="radio" name="q5" data-correct="true">Gran Turismo</label><br>
+            <label><input type="radio" name="q5" data-correct="false">Forza Horizon</label><br>
+            <label><input type="radio" name="q5" data-correct="false">Project Cars</label>
+        </form>
+    </div><br>
     <!-- === MI OPINIÓN PERSONAL Y VÍDEOS DE GRAN TURISMO === -->
     <div style="margin: 80px 0; text-align: center;">
         <h2 style="color: #ff6b00; margin-bottom: 30px; font-size: 2em;">
@@ -479,84 +543,6 @@
             </ol>
         </div>
     </div>
-    <div class="container" id="dotted">
-        <h2>Preguntas</h2>
-        <p>1. ¿Quién dirigió la película Gran Turismo (2023)?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Zack Snyder
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Neill Blomkamp
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Christopher Nolan
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">James Cameron
-                <span class="feedback incorrecto">❌</span>
-            </label>
-        </form>
-        <p>2. ¿Cuál es el nombre del protagonista que pasa de jugador a piloto profesional?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Danny Moore
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Jack Salter
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Jann Mardenborough
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Kazunori Yamauchi
-                <span class="feedback incorrecto">❌</span>
-            </label>
-        </form>
-        <p>3. ¿Qué actor interpreta al mentor Jack Salter?</p>
-        <form>
-            <label><input type="radio" name="color" id="correcto">David Harbour
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Orlando Bloom
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Djimon Hounsou
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Darren Barnet
-                <span class="feedback incorrecto">❌</span>
-            </label>
-        </form>
-        <p>4. ¿Qué compañía distribuyó la película?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Universal Pictures
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Sony Pictures Releasing
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Paramount Pictures
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">20th Century Studios
-                <span class="feedback incorrecto">❌</span>
-            </label>
-        </form>
-        <p>5. ¿En qué videojuego se basa la historia de la película?</p>
-        <form>
-            <label><input type="radio" name="color" id="incorrecto">Need for Speed
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="correcto">Gran Turismo
-                <span class="feedback correcto">✅</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Forza Horizon
-                <span class="feedback incorrecto">❌</span>
-            </label><br>
-            <label><input type="radio" name="color" id="incorrecto">Project Cars
-                <span class="feedback incorrecto">❌</span>
-            </label>
-        </form>
-    </div><br>
     <!--Esto es un codigo de un gif-->
     <div style="text-align: center;"><img src="/Imagenes/gran peli.gif" alt="Un gtr" width="20%"></div>
     <ol class="pagination">
@@ -568,8 +554,10 @@
         <li><a href="Prueba 6.html">5</a></li>
         <li><a href="Prueba 6.html">&raquo;</a></li>
     </ol>
+    <div id="progressBar"></div>
     <script src="session.js"></script>
     <script src="quiz.js"></script>
+    <script src="scroll.js"></script>
 </body>
 
 </html>

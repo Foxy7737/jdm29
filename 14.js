@@ -1,3 +1,13 @@
+// Hash simple pero suficiente para ofuscar (no uses MD5 en producción real)
+function simpleHash(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        const char = str.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash; // Convert to 32bit integer
+    }
+    return hash.toString(16);
+}
 const form = document.getElementById('formRegistro');
 const contenedor = document.getElementById('registrosGuardados');
 const contador = document.getElementById('contador');
@@ -26,7 +36,7 @@ form.addEventListener('submit', function (e) {
         usuario: document.getElementById('fname').value.trim(),
         fechaNac: document.getElementById('fechaNac').value,
         email: document.getElementById('email').value.trim(),
-        password: document.getElementById('password1').value,
+        password: simpleHash(document.getElementById('password1').value),
         intereses: intereses.length > 0 ? intereses : ['Ninguno seleccionado'],
         avatar: ''  // Por si quieres avatars también aquí en el futuro
     };
